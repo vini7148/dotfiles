@@ -13,6 +13,12 @@ This repository contains a copy of the dotfiles for my curret linux setup
 * Text Editor : [VisualStudio Code](https://code.visualstudio.com/)
 * Viewer : [Zathura](https://pwmt.org/projects/zathura/)
 
+## Applications open
+
+* Top - Left : Terminal with neofetch command
+* Bottom - Left : htop
+* Right : VisualStudio Code
+
 ## Screenshots
 
 ![img_1](https://github.com/vini7148/dotfiles/blob/master/ScreenShots/1588898988_0619_08.05.2020_1920x1080.png)

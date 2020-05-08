@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/vinayak/newtt/main/main'
+let g:netrw_dirhist_6='/home/vinayak/newtt/main'
+let g:netrw_dirhist_5='/home/vinayak/newtt/main/main'
+let g:netrw_dirhist_4='/home/vinayak/newtt/main'
+let g:netrw_dirhist_3='/home/vinayak/newtt/main/main'
+let g:netrw_dirhist_2='/home/vinayak/newtt/main'
+let g:netrw_dirhist_1='/home/vinayak/newtt'
+let g:netrw_dirhist_0='/home/vinayak'
+let g:netrw_dirhist_9='/home/vinayak/newtt/main/main'
+let g:netrw_dirhist_8='/home/vinayak/newtt'

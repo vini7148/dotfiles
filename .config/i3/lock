@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+text="Battery: $(acpi -b | grep -P -o '\d+%')"
+font="DejaVu-Sans"
+iconlight="$HOME/.config/i3lock/lock.png"
+icondark="$HOME/.config/i3lock/lockdark.png"
+tmpbg='/tmp/screen.png'
+infobg='/tmp/lockinfo.png'
+
+#Screenshot of current background
+scrot -z "$tmpbg"
+
+#create blurred background that will be updated 
+#with battery information
+convert "$tmpbg" -scale 10% -scale 1000% "$tmpbg"
+
+#Using the HSB(aka HSL) color space, we will dertermine the "average brightness" of current screen
+#Arbitrary threshold will be a brightness of 60
+threshold=60
+
+#Use imagemagick to collect the "average" HSB, then sed to throw out the H and S, keeping the B
+colorval="$(convert "$tmpbg" -colorspace hsb -scale 1x1! -format "%[pixel:s.p{0,0}]" info: | sed 's/hsb*.*,.*,//' | sed 's/%)//')"
+
+#$colorval is a floating point number, so we use bc for comparison to the threshold
+#if the screen is brighter than our threshold, use black icon and text
+if [ 1 -eq $(echo "${colorval} > ${threshold}" | bc) ]; then
+    fontfill="black"
+    icon="$icondark"
+else
+    fontfill="white"
+    icon="$iconlight"
+fi
+
+#Set cron job for lock-helper
+#lock-helper updates i3lock with battery information every minute
+croncmd="$HOME/.config/i3lock/lock-helper ${icon} ${font} ${fontfill}"
+cronjob="*/1 * * * * $croncmd"
+( crontab -l | grep -v "$croncmd" ; echo "$cronjob" ) | crontab -
+
+#this function will run when the script exits, which will be shortly after the screen locks
+#The logic here is that if an i3lock process is still running, don't exit. 
+#if no i3lock process is detected, sleep for one second, then check again
+#if on second check there is no i3lock process, remove the cron job for lock-helper then exit
+#if on second check there is an i3lock process, then lock-helper must have been updating; reset counter
+function finish {
+  counter=0
+  while true; do
+        if pgrep "i3lock" > /dev/null;then
+                counter=0
+        else
+                if [ "$counter" -eq 0 ]; then
+                        counter=1
+                        sleep 1s
+                        continue
+                else
+                        ( crontab -l | grep -v "$croncmd" ) | crontab -
+                        exit
+                fi
+
+        fi
+  done
+}
+trap finish EXIT
+
+#Set initial lock screen that lock-helper updates
+convert "$tmpbg" -font "$font" -pointsize 26 -fill "$fontfill" -gravity center \
+-annotate +0+160 "$text" "$icon" -gravity center -composite -matte "$infobg"
+i3lock -u -i "$infobg"

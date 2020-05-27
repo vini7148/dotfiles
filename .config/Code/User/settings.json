@@ -5,7 +5,7 @@
     "editor.fontFamily": "'FuraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "terminal.integrated.fontFamily": "'FuraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "C_Cpp.updateChannel": "Insiders",
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "workbench.iconTheme": "material-icon-theme",
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "editor.wordWrap": "on",
@@ -23,5 +23,11 @@
         "editor.tabSize": 2
     },
     "workbench.colorTheme": "Material Theme Darker High Contrast",
-    "python.pythonPath": "/bin/python3"
+    "python.pythonPath": "/bin/python3",
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.semanticHighlighting.enabled": true,
+    "python.jediEnabled": false,
+    "clangd.path": "/home/vinayak/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/10.0.0/clangd_10.0.0/bin/clangd"
 }

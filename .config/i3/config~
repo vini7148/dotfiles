@@ -11,7 +11,8 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+Shift+n border normal
 
-font xft:URWGothic-Book 11
+# font xft:URWGothic-Book 11
+# font pango:Source Sans Pro-10 10
 
 floating_modifier $mod
 
@@ -21,8 +22,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id "rofi -show drun -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
 bindsym $mod+Print exec --no-startup-id ~/.config/rofi/scripts/screenshot.sh
 bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id ~/.config/rofi/scripts/volume.sh
@@ -162,6 +163,12 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 # for_window [class="Firefox" instance="Places"] floating enable
+
+# to bind windows to a workspace
+assign [class="Spotify"] $ws8
+assign [class="spotify"] $ws8
+assign [class="Spotify-free"] $ws8
+assign [class="spotify-free"] $ws8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -412,6 +419,6 @@ exec xrandr -r 60
 # to turn off numlock at startup
 exec numlockx off
 
-exec_always $HOME/.config/i3/scripts/bat_war.sh
+# exec_always $HOME/.config/i3/bat_war.sh
 
 # exec_always --no-startup-id $HOME/.config/polybar/scripts/polybar-manager.sh launch

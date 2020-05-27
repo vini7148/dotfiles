@@ -1,0 +1,346 @@
+; polybar/bar-bottom.polybar
+[bar/bottom]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 23
+offset-y = 0
+bottom = true
+
+fixed-center = true
+
+font-0 = FuraCode Nerd Font Mono:style=medium:size=12;3
+font-1 = FuraCode Nerd Font Mono:style=italic:size=12;3
+font-2 = FuraCode Nerd Font Mono:style=medium:size=16;3
+
+border-size = 8
+border-color = ${colors.background}
+line-size = 0
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+background = ${colors.background}
+foreground = ${colors.background}
+
+modules-left = i3
+modules-center = 
+modules-right =  filesystem memory cpu temperature battery
+
+#### Modules ####
+[module/i3]
+type = internal/i3
+
+format = <label-state> <label-mode>
+index-sort=true
+wrapping-scroll=false
+pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = ${colors.black}
+label-mode-background = ${colors.blue}
+
+label-focused = "%{T3}%{T-} %icon% %{T3}%{T-}"
+label-focused-background = ${colors.yellow}
+label-focused-foreground = ${colors.background}
+label-focused-padding = 0
+
+label-unfocused = "%{T3}%{T-}%{T3}%{T-}"
+label-unfocused-padding = 0
+label-unfocused-background = ${colors.blue}
+label-unfocused-foreground = ${colors.background}
+
+label-urgent = "%{T3}%{T-}%icon%%{T3}%{T-}"
+label-urgent-padding = 0
+label-urgent-background = ${colors.magenta}
+label-urgent-foreground = ${colors.background}
+
+label-visible = "%{T3}%{T-}%icon%%{T3}%{T-}"
+label-visible-padding = 0
+label-visible-foreground = ${colors.background}
+label-visible-background = ${colors.blue}
+
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;﬏
+ws-icon-3 = 4;ﴬ
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;阮
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{T3}%{T-} %mountpoint%: %percentage_used%% %{T3}%{T-}
+label-unmounted = 
+label-mounted-background = ${colors.dark-green}
+label-mounted-foreground = ${colors.background}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "%{T3}%{T-}  "
+format-underline = ${colors.cyan}
+label = %percentage:2%% %{T3}%{T-}
+format-background = ${colors.blue}
+format-foreground = ${colors.background}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "%{T3}%{T-}  "
+format-underline = ${colors.dark-green}
+label = %percentage_used%% %{T3}%{T-}
+
+format-background = ${colors.dark-cyan}
+format-foreground = ${colors.background}
+
+;polybar/bar-top.polybar
+[bar/top]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 23
+offset-y = 0
+
+fixed-center = true
+
+font-0 = FuraCode Nerd Font Mono:style=medium:size=12;3
+font-1 = FuraCode Nerd Font Mono:style=italic:size=12;3
+font-2 = FuraCode Nerd Font Mono:style=medium:size=16;3
+
+border-size = 8
+border-color = ${colors.background}
+line-size = 0
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+background = ${colors.background}
+foreground = ${colors.background}
+
+modules-left =  power-menu audio
+modules-center = music-info music-prev music-pause music-next 
+modules-right = xkeyboard wlan date
+
+#### Modules ####
+[module/power-menu]
+type = custom/script
+exec = echo "%{T3}%{T-}%{T3}%{T-}"
+interval = 1
+click-left = exec $HOME/.dotfiles/rofi/menus/power_menu
+format-background = ${colors.dark-red}
+format-foreground = ${colors.background}
+
+[module/music-info]
+type = custom/script
+exec = echo "$(playerctl metadata xesam:artist) | $(playerctl metadata xesam:title)"
+interval = 1
+format-prefix = "%{T3}%{T-}  "
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/music-prev]
+type = custom/script
+exec = echo " 玲"
+click-left = playerctl previous
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/music-pause]
+type = custom/script
+exec = echo " 懶"
+click-left = playerctl play-pause
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/music-next]
+type = custom/script
+exec = echo " 怜 %{T3}%{T-}"
+click-left = playerctl next
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "%{T3}%{T- }  "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.cyan}
+
+label-layout = "%layout% %{T3}%{T-}"
+label-layout-foreground = ${colors.background}
+label-layout-background = ${colors.cyan}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.cyan}
+
+[module/wlan]
+type = internal/network
+interface = wls3
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = ${colors.dark-red}
+format-connected-background = ${colors.dark-magenta}
+label-connected-foreground = ${colors.background}
+label-connected = %essid% %{T3}%{T-}
+format-connected-prefix = "%{T3}%{T- }"
+format-connected-prefix-foreground = ${colors.background}
+
+format-disconnected =
+;format-disconnected =
+;format-disconnected-underline = ${colors.dark-red}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 睊
+ramp-signal-1 = 直
+ramp-signal-2 = 直
+ramp-signal-3 = 直
+ramp-signal-4 = 直
+ramp-signal-foreground = ${colors.background}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %d-%m-%Y"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = %{T3}%{T- } 
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.dark-yellow}
+label = %date% %time% %{T3}%{T-}
+label-background = ${colors.dark-yellow}
+label-foreground = ${colors.background}
+
+[module/audio]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+
+format-volume = " <label-volume><bar-volume>"
+label-volume = "%{T3}%{T-} 墳 "
+format-background = ${colors.dark-green}
+format-foreground = ${colors.background}
+label-volume-background = ${colors.dark-green}
+label-volume-foreground = ${colors.background}
+format-volume-suffix = %{T3}%{T-}
+format-volume-suffix-background = ${colors.dark-green}
+format-volume-suffix-foreground = ${colors.background}
+;format-volume-foreground = #FFFFFF
+
+format-muted= "<label-muted>"
+label-muted = "%{T3}%{T-} 婢 %{T3}%{T-}"  
+label-muted-background = ${colors.dark-green}
+label-muted-foreground = ${colors.background}
+
+bar-volume-width = 10
+bar-volume-foreground = ${colors.background}
+bar-volume-background = ${colors.dark-green}
+bar-volume-gradient = false
+
+bar-volume-indicator = 
+bar-volume-indicator-foreground = ${colors.background-alt}
+bar-volume-indicator-background = ${colors.dark-green}
+
+bar-volume-fill = 
+bar-volume-fill-foreground = ${colors.background}
+bar-volume-fill-background = ${colors.dark-green}
+
+bar-volume-empty = 
+bar-volume-empty-foreground = ${colors.background}
+bar-volume-empty-background = ${colors.dark-green}
+
+; polybar/battery.polybar
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 9git config --global credential.helper store
+6
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
+format-charging = "%{T3}%{T-} <ramp-capacity> <label-charging> %{T3}%{T-}"
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-discharging>
+format-discharging = "%{T3}%{T-} <ramp-capacity> <label-discharging> %{T3}%{T-}"
+
+label-charging = %percentage%% ﮣ
+label-discharging = %percentage%%
+
+format-discharging-foreground = ${colors.background}
+format-discharging-background = ${colors.dark-red}
+
+format-charging-foreground = ${colors.background}
+format-charging-background = ${colors.dark-green}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+
+; polybar/general.polybar
+[colors]
+background = ${xrdb:color0}
+background-alt = ${xrdb:color8}
+foreground = ${xrdb:color15}
+foreground-alt = ${xrdb:color15}
+black = ${xrdb:color0}
+dark-grey = ${xrdb:color8}
+dark-red = ${xrdb:color1}
+red = ${xrdb:color9}
+dark-green = ${xrdb:color2}
+green = ${xrdb:color10}
+dark-yellow = ${xrdb:color3}
+yellow = ${xrdb:color11}
+dark-blue = ${xrdb:color4}
+blue = ${xrdb:color12}
+dark-magenta = ${xrdb:color5}
+magenta = ${xrdb:color13}
+dark-cyan = ${xrdb:color6}
+cyan = ${xrdb:color14}
+light-grey = ${xrdb:color7}
+white = ${xrdb:color15}

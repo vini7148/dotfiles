@@ -1,95 +1,194 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"        _   _       _                  _____             __ _               "
-"       | \ | |     (_)                / ____|           / _(_)              "
-"       |  \| |_   ___ _ __ ___       | |     ___  _ __ | |_ _  __ _         "
-"       | . ` \ \ / / | '_ ` _ \      | |    / _ \| '_ \|  _| |/ _` |        "
-"       | |\  |\ V /| | | | | | |     | |___| (_) | | | | | | | (_| |        "
-"       |_| \_| \_/ |_|_| |_| |_|      \_____\___/|_| |_|_| |_|\__, |        "
-"                                                               __/ |        "
-"                                                              |___/         "
-"                                                                            "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The above ASCII art is generated using service provided in this webpage:
-" https://www.kammerl.de/ascii/AsciiSignature.php.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" " Basic Settings " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"{ Header and Licence
-"{{ header info
-" Description: This is my Neovim configuration which supports Mac, Linux and
-" Windows, with various plugins configured. This configuration evolves as I
-" learn more about Nvim and becomes more proficient in using Nvim. Since it is
-" very long (more than 1000 lines!), you should read it carefully and
-" take only the settings and options which suits you. I would not recommend
-" downloading this file and replace your own init.vim. Good configurations are
-" built over time and take your time to polish.
-" Author: Jie-dong Hao
-" Email: jdhao@hotmail.com
-"}}
+""" SOURCE FILES
 
-"{{ License: MIT License
-"
-" Copyright (c) 2018 Jie-dong Hao
-"
-" Permission is hereby granted, free of charge, to any person obtaining a copy
-" of this software and associated documentation files (the "Software"), to
-" deal in the Software without restriction, including without limitation the
-" rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-" sell copies of the Software, and to permit persons to whom the Software is
-" furnished to do so, subject to the following conditions:
-"
-" The above copyright notice and this permission notice shall be included in
-" all copies or substantial portions of the Software.
-"
-" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-" FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-" IN THE SOFTWARE.
-"}}
-"}
+""" Plugins
+source ~/.config/nvim/plugins.vim
 
-"{ Main configurations
-let g:is_win = has('win32') || has('win64')
-let g:is_linux = has('unix') && !has('macunix')
-let g:is_mac = has('macunix')
+""" Default Statusline
+"source ~/.config/nvim/statusline.vim
 
-" If you are using Neovim on Linux system and want to set it up system wide
-" for users, set g:nvim_system_wide to 1. If you only want to use it for
-" personal need, set this variable to 0.
-let g:nvim_system_wide=0
+""" Personal Keybindings
+source ~/.config/nvim/keybindings.vim
 
-" Do not set this varialbe if the system is not *nix
-if g:nvim_system_wide
-    if !g:is_linux
-        let g:nvim_system_wide = 0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""" SETTINGS
+
+""" Encoding
+set encoding=utf-8
+scriptencoding utf-8
+set fileencoding=utf-8
+
+" Colorscheme
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
+"set t_Co=256
+"let g:rehash256 = 1
+"colorscheme challenger_deep
+colorscheme gruvbox
+
+""" Bold Highlights
+source ~/.config/nvim/bold-highlights.vim
+
+" Signify Symbols Colors
+highlight SignifySignAdd    ctermfg=green  guifg=#95ffa4 cterm=NONE gui=bold
+highlight SignifySignDelete ctermfg=red    guifg=#ff8080 cterm=NONE gui=bold
+highlight SignifySignChange ctermfg=yellow guifg=#ffe9aa cterm=NONE gui=bold
+
+""" Enabling Tabline
+"set showtabline=2
+
+"autocmd BufEnter * silent! lcd %:p:h
+set autochdir
+set nocompatible
+filetype plugin indent on
+
+""" Commandline Completion
+set wildmenu
+
+""" Shell
+"set shell=/bin/fish
+
+""" Split Below/Right
+set splitbelow
+set splitright
+
+""" Left/Right Navigation Change Line
+set whichwrap+=<,>,[,]
+
+""" Highlight the line on which the cursor lives.
+set nocursorline
+
+""" Always show at least one line above/below the cursor.
+set scrolloff=1
+""" Always show at least one line left/right of the cursor.
+set sidescrolloff=5
+
+""" Relative line numbers
+set number relativenumber
+
+""" Highlight matching pairs of brackets. Use the '%' character to jump between them.
+set matchpairs+=<:>
+
+""" Display different types of white spaces.
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
+""" Use system clipboard
+"set clipboard+=unnamedplus
+set clipboard=unnamedplus
+
+""" Remove timeout for partially typed commands
+set notimeout
+
+""" If lightline/airline is enabled, don't show mode under it
+set noshowmode
+
+""" Substitute live preview
+set inccommand=nosplit
+
+""" Leader Key
+map <Space> <Leader>
+
+""" Swap and Backup
+set noswapfile
+set nobackup
+set undodir=~/.config/nvim/undodir
+set undofile
+
+""" Indentation
+set smarttab
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set nowrap
+set smartindent
+set autoindent
+"set cindent
+
+""" Give more space for displaying messages.
+"set cmdheight=2
+
+""" Allow switching between buffers without saving
+set hidden
+
+""" Mouse support
+set mouse=a
+
+""" Case insensitive searching
+set ignorecase
+
+""" Will automatically switch to case sensitive if you use any capitals
+set smartcase
+
+""" netrw configuration
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_banner = 0
+let g:netrw_winsize = 21
+let g:netrw_altfile = 1
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
+autocmd FileType netrw set nolist
+
+""" Always Enter Terminal Buffer in Insert Mode
+""" For Split Term opened with a shortcut
+autocmd BufWinEnter,WinEnter term://* startinsert
+""" For New Terminals Opened using :term command
+autocmd TermOpen * startinsert
+
+""" Auto toggle smart case of for ex commands
+""" Assumes 'set ignorecase smartcase'
+augroup dynamic_smartcase
+    autocmd!
+    autocmd CmdLineEnter : set nosmartcase
+    autocmd CmdLineLeave : set smartcase
+augroup END
+
+""" Restore last cursor position and marks on open
+au BufReadPost *
+         \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+         \ |   exe "normal! g`\""
+         \ | endif
+
+""" Make ci( work like quotes do
+function! New_cib()
+    if search("(","bn") == line(".")
+        sil exe "normal! f)ci("
+        sil exe "normal! l"
+        startinsert
+    else
+        sil exe "normal! f(ci("
+        sil exe "normal! l"
+        startinsert
     endif
-endif
+endfunction
 
-let g:nvim_config_root = expand('<sfile>:p:h')
+""" And for curly brackets
+function! New_ciB()
+    if search("{","bn") == line(".")
+        sil exe "normal! f}ci{"
+        sil exe "normal! l"
+        startinsert
+    else
+        sil exe "normal! f{ci{"
+        sil exe "normal! l"
+        startinsert
+    endif
+endfunction
 
-let g:config_file_list = ['variables.vim',
-    \ 'options.vim',
-    \ 'autocommands.vim',
-    \ 'mappings.vim',
-    \ 'plugins.vim',
-    \ 'ui.vim'
-    \ ]
+nnoremap ci( :call New_cib()<CR>
+nnoremap cib :call New_cib()<CR>
+nnoremap ci{ :call New_ciB()<CR>
+nnoremap ciB :call New_ciB()<CR>
 
-for s:fname in g:config_file_list
-    execute 'source ' . g:nvim_config_root . '/' . s:fname
-endfor
-"}
+""" Trim Whitespaces
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+autocmd BufWritePre * :call TrimWhitespace()
 
-"{ A list of resources which inspire me
-" This list is non-exhaustive as I can not remember the source of many
-" settings.
-
-" - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-" - https://github.com/tamlok/tvim/blob/master/.vimrc
-" - https://nvie.com/posts/how-i-boosted-my-vim/
-" - https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/
-" - https://sanctum.geek.nz/arabesque/vim-anti-patterns/
-" - https://github.com/gkapfham/dotfiles/blob/master/.vimrc
-" - https://google.github.io/styleguide/vimscriptguide.xml
-"}
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" " END " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

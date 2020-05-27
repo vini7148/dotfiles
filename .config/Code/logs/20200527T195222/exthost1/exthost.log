@@ -1,0 +1,24 @@
+[2020-05-27 19:52:23.356] [exthost] [info] extension host started
+[2020-05-27 19:52:23.374] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2020-05-27 19:52:23.374] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-05-27 19:52:23.376] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2020-05-27 19:52:23.376] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-05-27 19:52:23.384] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2020-05-27 19:52:23.384] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2020-05-27 19:52:23.413] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":true,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"*"}
+[2020-05-27 19:52:23.413] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2020-05-27 19:52:23.415] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2020-05-27 19:52:23.415] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-05-27 19:52:23.416] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-result {"startup":true,"extensionId":{"value":"vscode.search-result","_lower":"vscode.search-result"},"activationEvent":"*"}
+[2020-05-27 19:52:23.417] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/search-result/dist/extension.js
+[2020-05-27 19:52:23.417] [exthost] [info] ExtensionService#_doActivateExtension vscode.vscode-account {"startup":true,"extensionId":{"value":"vscode.vscode-account","_lower":"vscode.vscode-account"},"activationEvent":"*"}
+[2020-05-27 19:52:23.417] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/vscode-account/dist/extension.js
+[2020-05-27 19:52:23.424] [exthost] [info] ExtensionService#_doActivateExtension Equinusocio.vsc-material-theme {"startup":true,"extensionId":{"value":"Equinusocio.vsc-material-theme","_lower":"equinusocio.vsc-material-theme"},"activationEvent":"*"}
+[2020-05-27 19:52:23.424] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/vinayak/.vscode/extensions/equinusocio.vsc-material-theme-32.6.0/build/material.theme.config
+[2020-05-27 19:52:23.430] [exthost] [info] ExtensionService#_doActivateExtension equinusocio.vsc-material-theme-icons {"startup":true,"extensionId":{"value":"equinusocio.vsc-material-theme-icons","_lower":"equinusocio.vsc-material-theme-icons"},"activationEvent":"*"}
+[2020-05-27 19:52:23.430] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/vinayak/.vscode/extensions/equinusocio.vsc-material-theme-icons-1.1.4/out/src/extension
+[2020-05-27 19:52:23.434] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"extensionId":{"value":"PKief.material-icon-theme","_lower":"pkief.material-icon-theme"},"activationEvent":"*"}
+[2020-05-27 19:52:23.434] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/vinayak/.vscode/extensions/pkief.material-icon-theme-4.1.0/dist/extension
+[2020-05-27 19:52:23.437] [exthost] [info] ExtensionService#_doActivateExtension zhuangtongfa.material-theme {"startup":true,"extensionId":{"value":"zhuangtongfa.material-theme","_lower":"zhuangtongfa.material-theme"},"activationEvent":"*"}
+[2020-05-27 19:52:23.437] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/vinayak/.vscode/extensions/zhuangtongfa.material-theme-3.7.1/out/extension.js
+[2020-05-27 19:52:23.449] [exthost] [info] eager extensions activated

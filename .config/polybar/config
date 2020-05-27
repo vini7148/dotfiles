@@ -3,7 +3,7 @@ width = 90%
 offset-x = 5%
 offset-y = 1%
 height = 27
-radius = 5
+radius = 7.5
 fixed-center = true
 
 # background = #2f2f38
@@ -15,7 +15,7 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 line-size = 3
-line-color =
+line-color = #FFFFFF
 
 border-size = 0
 border-color =
@@ -23,7 +23,7 @@ border-color =
 padding-left = 2
 padding-right = 2
 
-module-margin-left = 0
+module-margin-left = 1
 module-margin-right = 1
 
 font-0 = "Source Code Pro Semibold:size=10;1"
@@ -54,7 +54,7 @@ width = 60%
 offset-x = 20%
 offset-y = 1%
 height = 27
-radius = 5
+radius = 7.5
 fixed-center = true
 
 background = #60000000
@@ -78,8 +78,9 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 font-3 = "Font Awesome 5 Brands Regular:style=Regular:size=10;1"
 
 modules-left = cpu system-cpu-frequency temperature gputemp
-modules-center = memory filesystem
-modules-right = bat-ext wlan-ext eth-ext ip
+modules-center = memory filesystem bat-ext
+modules-right = wlan-ext eth-ext
+; ip
 
 tray-position = none
 tray-padding = 5
@@ -247,14 +248,14 @@ format = <label>
 type = internal/i3
 ; 
 
-ws-icon-0 = 1 ;❶
-ws-icon-1 = 2 ;❷
-ws-icon-2 = 3 ;❸
-ws-icon-3 = 4 ;❹
-ws-icon-4 = 5 ;❺
-ws-icon-5 = 6 ;❻
-ws-icon-6 = 7 ;❼
-ws-icon-7 = 8 ;❽
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
 
 format = <label-state> <label-mode>
 index-sort = true
@@ -280,8 +281,8 @@ label-visible-foreground = #FFFFFF
 label-visible-underline = #555555
 label-visible-padding = 2
 
-label-urgent = %index%
-label-urgent-foreground = #FFFFFF
+label-urgent = %index% 
+label-urgent-foreground = #FF0000
 label-urgent-padding = 2
 ; label-separator = |
 label-separator-padding = 0
@@ -341,10 +342,11 @@ type = internal/memory
 interval = 2
 format = <label> <bar-used>
 format-prefix = " "
-label = %percentage_used%%
+label = %percentage_used%% 
+; %gb_used%
 ; label = MEM
 label-font = 1
-label-foreground = #99
+; label-foreground = #99
 
 bar-used-width = 5
 bar-used-gradient = true
@@ -356,7 +358,6 @@ bar-used-fill-font = 3
 bar-used-empty = █
 bar-used-empty-font = 3
 bar-used-empty-foreground = #44
-
 
 [module/fan]
 type = custom/script
@@ -370,7 +371,8 @@ interval = 10
 type = internal/temperature
 interval = 3
 thermal-zone = 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+; hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input
 base-temperature = 20
 warn-temperature = 80
 units = true
@@ -410,7 +412,7 @@ interval = 3.0
 click-left = nm-connection-editor
 format-connected = <ramp-signal> <label-connected>
 format-connected-padding = 
-label-connected = %essid% %signal% %upspeed%  %downspeed% 
+label-connected = %essid% %signal% %upspeed%  %downspeed%  %local_ip%
 format-disconnected =
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -432,13 +434,14 @@ interface = enp64s0
 interval = 3.0
 format-connected-padding = 
 format-connected-prefix = " "
-label-connected = %ifname% %upspeed%  %downspeed% 
+label-connected = %ifname% %upspeed%  %downspeed%  %local_ip%
 
 [module/ip]
 type = custom/script
 exec = dig +short myip.opendns.com @resolver1.opendns.com
 format = <label>
 label = %output%
+label-maxlen = 15
 interval = 1.0
 
 [module/mpd]
@@ -510,7 +513,8 @@ menu-3-1-exec = menu-open-0
 type = custom/script
 exec = ~/.config/polybar/spotify.sh %artist% - %title%
 tail = true
-interval = 2
+label-maxlen = 60
+interval = 1
 
 [settings]
 screenchange-reload = true

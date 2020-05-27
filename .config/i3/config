@@ -3,7 +3,7 @@ set $mod Mod4
 new_window pixel 1
 new_float normal
 
-border_radius 5
+# border_radius 7
 
 hide_edge_borders none
 
@@ -11,7 +11,8 @@ bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+Shift+n border normal
 
-font xft:URWGothic-Book 11
+# font xft:URWGothic-Book 11
+# font pango:Source Sans Pro-10 10
 
 floating_modifier $mod
 
@@ -21,14 +22,16 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id "rofi -show drun -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
 bindsym $mod+Print exec --no-startup-id ~/.config/rofi/scripts/screenshot.sh
 bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id ~/.config/rofi/scripts/volume.sh
 bindsym $mod+m exec --no-startup-id ~/.config/rofi/scripts/mpd.sh
 bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/network.sh
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
+bindsym $mod+z exec --no-startup-id ~/.config/rofi/scripts/quicklinks.sh
+bindsym $mod+g exec --no-startup-id ~/.config/rofi/scripts/time.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -58,8 +61,8 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+h split h;exec notify-send 'Tile Horizontally'
+bindsym $mod+v split v;exec notify-send 'Tile Vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -163,6 +166,12 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 # for_window [class="Firefox" instance="Places"] floating enable
 
+# to bind windows to a workspace
+assign [class="Spotify"] $ws8
+# assign [class="spotify"] $ws8
+# assign [class="Spotify-free"] $ws8
+# assign [class="spotify-free"] $ws8
+
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -220,24 +229,25 @@ mode "resize" {
 
 # Wallpaper
 exec --no-startup-id nitrogen --restore; sleep 1; 
-exec_always --no-startup-id pkill compton; compton -b
+exec_always --no-startup-id pkill compton; compton --blur-background
+# compton -b
 # compton -b
 # exec bwall -pixel_city
 # exec bwall -city
 # exec bwall -space
 # exec dwall -s room
 
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 # exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
+# exec --no-startup-id pamac-tray
+# exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
+exec_always --no-startup-id pkill polybar; $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id pamac-tray
 exec_always --no-startup-id clipit 
-exec_always --no-startup-id volumeicon
+# exec_always --no-startup-id volumeicon
 
 # Theme colors
 client.focused #b0c4bb #2f2f38 #b0c4bb #81a2be #81a2be
@@ -298,12 +308,15 @@ mode "$mode_gaps_outer" {
 hide_edge_borders smart
 
 # set power-manager and volume control
-exec --no-startup-id mate-power-manager
+# exec --no-startup-id mate-power-manager
+
+# dunst
+exec --no-startup-id dunst -config "$HOME/.config/dunst/dunstrc"
 
 # Lockscreen
 # exec light-locker
 exec xset s 600 300 
-exec xss-lock -n "$HOME/.config/i3/scripts/brightness.sh screensaver" -l -- $HOME/.config/i3/scripts/lockscreen.sh --suspend
+# exec xss-lock -n "$HOME/.config/i3/scripts/brightness.sh screensaver" -l -- $HOME/.config/i3/scripts/lockscreen.sh --suspend
 
 # === Lock the screen
 # bindsym $mod+Shift+x exec $HOME/.config/i3/scripts/lockscreen.sh --lock
@@ -314,7 +327,10 @@ bindsym $mod+Ctrl+t exec $HOME/Documents/Programming/scripts/todo/todo.sh notifi
 bindsym $mod+Shift+t exec $HOME/Documents/Programming/scripts/todo/todo.sh notification deleted
 bindsym $mod+Shift+Ctrl+t exec $HOME/Documents/Programming/scripts/todo/todo.sh notification
 
-bindsym $mod+x exec --no-startup-id ~/.config/i3/bl.sh
+bindsym $mod+x exec betterlockscreen --lock blur
+# bindsym $mod+x exec --no-startup-id ~/.config/i3/bl.sh
+# bindsym $mod+x exec --no-startup-id ~/.config/i3/bl_1.sh
+# bindsym $mod+x exec $HOME/.config/i3/scripts/lockscreen.sh --lock
 
 # Always mute microphone at startup, you know... FBI and stuff
 # exec_always amixer sset Capture nocap
@@ -329,8 +345,11 @@ bindsym $mod+Shift+x exec i3lock -i /home/vinayak/Pictures/bg11.png -c '#000000'
 # bindsym $mod+Shift+x exec /home/vinayak/i3lock-color/lock.sh
 # bindsym $mod+Shift+x exec i3lock #-c 00000f
 
-# for transparent terminal
-exec compton
+# for ranger
+# bindsym $mod+z exec gnome-terminal -hold -e ranger
+
+# for transparent windows
+# exec compton
 
 # for tap
 exec_always xinput set-prop 13 319 1
@@ -340,10 +359,11 @@ exec_always xinput set-prop 12 289 1
 exec_always xinput set-prop 11 272 1
 exec_always xinput set-prop 16 290 1
 exec_always xinput set-prop 17 321 1
+exec_always xinput set-prop 13 288 1
 
 # for block bt
-exec_always rfkill block bluetooth
-exec_always systemctl stop bluetooth
+# exec_always rfkill block bluetooth
+exec systemctl stop bluetooth
 
 # bar {
 #	height 28
@@ -361,9 +381,29 @@ bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Adjust volume 
+# -Ctrl is used to control the microphone
+# -Shift is used to change values at higher rate
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/.config/i3/scripts/volume.sh up 1
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/.config/i3/scripts/volume.sh down 1
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id $HOME/.config/i3/scripts/volume.sh up 5
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id $HOME/.config/i3/scripts/volume.sh down 5
+bindsym XF86AudioMute exec --no-startup-id $HOME/.config/i3/scripts/volume.sh mute
+
+bindsym Ctrl+XF86AudioRaiseVolume exec --no-startup-id $HOME/.config/i3/scripts/microphone.sh up 1
+bindsym Ctrl+XF86AudioLowerVolume exec --no-startup-id $HOME/.config/i3/scripts/microphone.sh down 1
+bindsym Ctrl+Shift+XF86AudioRaiseVolume exec --no-startup-id $HOME/.config/i3/scripts/microphone.sh up 5
+bindsym Ctrl+Shift+XF86AudioLowerVolume exec --no-startup-id $HOME/.config/i3/scripts/microphone.sh down 5
+bindsym Ctrl+XF86AudioMute exec --no-startup-id $HOME/.config/i3/scripts/microphone.sh mute
+
+# for cpu powermodes
+# bindsym $mod+Shift+p exec sudo bash -c 'for i in {0..11}; do cpufreq-set -c $i -g performance; done'
+# bindsym $mod+Shift+b exec sudo bash -c 'for i in {0..11}; do cpufreq-set -c $i -g powersave; done'
+exec sudo bash -c 'for i in {0..11}; do cpufreq-set -c $i -g powersave; done'
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
@@ -374,6 +414,8 @@ bindsym XF86MonBrightnessDown exec echo $((`cat /sys/class/backlight/intel_backl
 # bindsym XF86MonBrightnessUp exec light -k -A 10# xrandr --output eDP-1 --brightness 1.0 # xbacklight -inc 20 # increase screen brightness
 # bindsym XF86MonBrightnessDown exec light -k -U 10# xrandr --output eDP-1 --brightness 0.7 # xbacklight -dec 20 # decrease screen brightness
 # bindsym XF86MonBrightnessUp exec xrandr --output eDP-1 --brightness 1.0
+# bindsym XF86MonBrightnessUp exec ~/.config/i3/briup.sh
+
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -395,23 +437,26 @@ bindsym --release $mod+Shift+Print exec "scrot -u -d 4 '/home/vinayak/Pictures/s
 exec "notify-send \\"Hello, $USER\\""
 
 # for powertop
-exec powertop
-exec htop
+# exec powertop
+# exec htop
 
 # for desktop visualizer
 # exec glava --desktop
 
 # for tlp
-exec_always tlp start
+exec sudo tlp start
+exec sudo pm-powersave true
 
 # to stop bluetooth
-exec systemctl stop bluetooth
-exec ifconfig enp64s0 down
+exec sudo systemctl stop bluetooth
+exec sudo service bluetooth stop
+exec sudo service openvpn stop
+exec sudo ifconfig enp64s0 down
 exec xrandr -r 60
 
 # to turn off numlock at startup
 exec numlockx off
 
-exec_always $HOME/.config/i3/scripts/bat_war.sh
+exec_always $HOME/.config/i3/bat_war.sh
 
 # exec_always --no-startup-id $HOME/.config/polybar/scripts/polybar-manager.sh launch

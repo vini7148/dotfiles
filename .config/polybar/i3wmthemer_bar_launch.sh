@@ -6,4 +6,7 @@ sleep 1;
 
 polybar i3wmthemer_bar &
 polybar secondary &
-polybar sec &
+# polybar sec &
+
+# polybar top &
+# polybar bottom &

@@ -20,6 +20,7 @@ Plug 'rrethy/vim-hexokinase',           { 'do': 'make hexokinase', 'on': 'Hexoki
 Plug 'mbbill/undotree',                 { 'on': 'UndotreeToggle' }
 Plug 'mileszs/ack.vim',                 { 'on': 'Ack' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

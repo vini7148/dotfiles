@@ -26,24 +26,30 @@ dimStrength=60%
 
 # Available options: circle, bars
 indicatorType=circle
-indicatorPos=960:740
+indicatorPos=800:640
 timeString=%H:%M:%S
-timePos=960:540
+timePos=800:440
 timeSize=150
 dateString="%A,%d %B"
-datePos=960:570
+datePos=800:470
 dateSize=20
 verifyText=Verifying...
 wrongText=Wrong!
 noInputText=...
-inputTypeColor=f0544cAA
+inputTypeColor=ffffffff
 inputDeleteColor=ff1010ff
 greeterSize=40
 
+st=$($HOME/.config/i3/scripts/playerctl.sh info)
+test=" () []" 
 # Show currently playing song in the lockscreen as the greeter
-showSongAsGreeter=true
+if [[ "$st" == "$test" ]]; then
+	showSongAsGreeter=false
+else
+	showSongAsGreeter=true
+fi
 # Will be overridden if showSongAsGreeter is set to true
-greeterText=""
+greeterText="VINAYAK GOSWAMI"
 
 # Settings for the circle
 radius=90
@@ -51,8 +57,8 @@ ringWidth=15
 insideColor=00000000
 insideVerifyingColor=00000000
 insideWrongColor=00000000
-ringColor=00000055
-ringVerifyingColor=f0544c55
+ringColor=00000000
+ringVerifyingColor=ffffffff
 ringWrongColor=f0544cff
 separatorColor=f0544cff
 

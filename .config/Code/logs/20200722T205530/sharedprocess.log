@@ -1,0 +1,14 @@
+[2020-07-22 20:55:34.740] [sharedprocess] [info] main {"machineId":"301f1fcc823af762e49ab7605faef3abf05d1a3c423bf5d5446ba000afbb823c","windowId":2}
+[2020-07-22 20:55:39.512] [sharedprocess] [info] Installing extension: equinusocio.vsc-material-theme-icons
+[2020-07-22 20:55:39.513] [sharedprocess] [info] Installing extension: quantum.quantum-devkit-vscode
+[2020-07-22 20:55:40.516] [sharedprocess] [info] Downloaded extension: quantum.quantum-devkit-vscode /home/vinayak/.config/Code/CachedExtensionVSIXs/quantum.quantum-devkit-vscode-0.12.20072031
+[2020-07-22 20:55:40.756] [sharedprocess] [info] Downloaded extension: equinusocio.vsc-material-theme-icons /home/vinayak/.config/Code/CachedExtensionVSIXs/equinusocio.vsc-material-theme-icons-1.2.0
+[2020-07-22 20:55:42.347] [sharedprocess] [info] Extracted extension to /home/vinayak/.vscode/extensions/.equinusocio.vsc-material-theme-icons-1.2.0: equinusocio.vsc-material-theme-icons
+[2020-07-22 20:55:42.348] [sharedprocess] [info] Renamed to /home/vinayak/.vscode/extensions/equinusocio.vsc-material-theme-icons-1.2.0
+[2020-07-22 20:55:42.349] [sharedprocess] [info] Installation completed. equinusocio.vsc-material-theme-icons
+[2020-07-22 20:55:42.364] [sharedprocess] [info] Extensions installed successfully: equinusocio.vsc-material-theme-icons
+[2020-07-22 20:55:57.610] [sharedprocess] [info] Extracted extension to /home/vinayak/.vscode/extensions/.quantum.quantum-devkit-vscode-0.12.20072031: quantum.quantum-devkit-vscode
+[2020-07-22 20:55:57.610] [sharedprocess] [info] Renamed to /home/vinayak/.vscode/extensions/quantum.quantum-devkit-vscode-0.12.20072031
+[2020-07-22 20:55:57.615] [sharedprocess] [info] Installation completed. quantum.quantum-devkit-vscode
+[2020-07-22 20:55:57.638] [sharedprocess] [info] Extensions installed successfully: quantum.quantum-devkit-vscode
+[2020-07-22 20:56:14.784] [sharedprocess] [info] Starting to clean up unused language packs.

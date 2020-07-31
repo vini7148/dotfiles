@@ -20,13 +20,13 @@
 player=spotify
 
 # Show more info abou author and song
-moreInfo=false
+moreInfo=true
 
 # [WIP] Show the song cover (spotify) as the notification icon
 # Sometimes you might not be able to see the image, set useSpotifyCache to false
 # to directly download the image (it might take more time to show the notification)
-songCover=false
-useSpotifyCache=false
+songCover=true
+useSpotifyCache=true
 
 iconCachePath=$HOME/.cache/spotifyIcon
 spotifyCachePath=$HOME/.cache/spotify/Browser/Cache
@@ -115,26 +115,28 @@ function info() {
 	fi
 }
 
-if [ $(playerctl -l) != "No players were found" ]; then
+# if [ $(playerctl -l) != "No players were found" ]; then
 	case $1 in
 		play-pause)
-			playerctl -p "$player" play-pause
+			playerctl play-pause
 			sendNotification
 		;;
 		stop)
-			playerctl -p "$player" stop
+			playerctl stop
 			sendNotification
 		;;
 		next)
-			playerctl -p "$player" next
+			playerctl next
 			sendNotification
 		;;
 		previous)
-			playerctl -p "$player" previous
+			playerctl previous
 			sendNotification
 		;;
 		info)
 			info
 		;;
 	esac
-fi
+# fi
+
+#  -p "$player" 

@@ -1,0 +1,10 @@
+[2020-07-23 16:00:19.275] [sharedprocess] [info] main {"machineId":"301f1fcc823af762e49ab7605faef3abf05d1a3c423bf5d5446ba000afbb823c","windowId":2}
+[2020-07-23 16:00:19.805] [sharedprocess] [info] Deleted from disk equinusocio.vsc-material-theme-icons /home/vinayak/.vscode/extensions/equinusocio.vsc-material-theme-icons-1.1.4
+[2020-07-23 16:00:19.862] [sharedprocess] [info] Deleted from disk quantum.quantum-devkit-vscode /home/vinayak/.vscode/extensions/quantum.quantum-devkit-vscode-0.12.20070124
+[2020-07-23 16:00:22.013] [sharedprocess] [info] Installing extension: ms-python.python
+[2020-07-23 16:00:29.331] [sharedprocess] [info] Downloaded extension: ms-python.python /home/vinayak/.config/Code/CachedExtensionVSIXs/ms-python.python-2020.7.96456
+[2020-07-23 16:00:36.845] [sharedprocess] [info] Extracted extension to /home/vinayak/.vscode/extensions/.ms-python.python-2020.7.96456: ms-python.python
+[2020-07-23 16:00:36.846] [sharedprocess] [info] Renamed to /home/vinayak/.vscode/extensions/ms-python.python-2020.7.96456
+[2020-07-23 16:00:36.857] [sharedprocess] [info] Installation completed. ms-python.python
+[2020-07-23 16:00:36.871] [sharedprocess] [info] Extensions installed successfully: ms-python.python
+[2020-07-23 16:00:59.299] [sharedprocess] [info] Starting to clean up unused language packs.

@@ -12,15 +12,21 @@
 #		https://github.com/simonvic/dotfiles
 
 ###########################################
+# theme: "~/.config/rofi/themes/simonvic_fullscreen_reverse.rasi";
 */
  
 configuration {
 	show-icons: true;
+  	icon-theme:         "Papirus";
+  	location: 5;
+  	yoffset: -825;
+  	xoffset: -100;
 	drun-display-format: "{name}";
 	sidebar-mode: false;
-	theme: "~/.config/rofi/themes/simonvic_fullscreen_reverse.rasi";
+	theme: "~/.config/rofi/themes/simonvic.rasi";
 	display-window: "缾";
 	display-run: "$";
 	display-ssh: "~#";
 	display-drun: "§";
+	icon-theme: "Papirus";
 }

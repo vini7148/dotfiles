@@ -63,7 +63,8 @@ appName="simonvic.Brightness"
 
 
 function getBrightness {
-	xbacklight -get
+	cat /sys/class/backlight/intel_backlight/brightness 
+	# xbacklight -get
 }
 
 function setBrightness {
@@ -95,7 +96,8 @@ function buildBar {
 }
 
 function sendNotification {
-	brightness=`getBrightness`	
+	bright=`getBrightness`
+	brightness=$(( bright/240 ))
  	# Building the volume bar
 	if [ "$REDSHIFT_STATUS" = "on" ]; then
 		body="`buildBar 5 $brightness false` <b>$brightness% $REDSHIFT_TEMP\k</b>"    	
@@ -176,17 +178,21 @@ function screensaver() {
 case $1 in
     increase)
     	if [ -z $2 ]; then
-    		xbacklight -inc $defaultBrightnessChangeValue -steps $fade_steps -time $fade_time
+			echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+    		# xbacklight -inc $defaultBrightnessChangeValue -steps $fade_steps -time $fade_time
     	else
-				xbacklight -inc $2 -steps $fade_steps -time $fade_time
+				echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+				#xbacklight -inc $2 -steps $fade_steps -time $fade_time
 			fi
 			sendNotification
 			;;
     decrease)
     	if [ -z $2 ]; then
-    		xbacklight -dec $defaultBrightnessChangeValue -steps $fade_steps -time $fade_time
+			echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+    		# xbacklight -dec $defaultBrightnessChangeValue -steps $fade_steps -time $fade_time
     	else
-				xbacklight -dec $2 -steps $fade_steps -time $fade_time
+				echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+				# xbacklight -dec $2 -steps $fade_steps -time $fade_time
 			fi
 			sendNotification
 			;;

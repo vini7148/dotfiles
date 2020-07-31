@@ -2,124 +2,29 @@
     "telemetry.machineId": "301f1fcc823af762e49ab7605faef3abf05d1a3c423bf5d5446ba000afbb823c",
     "openedPathsList": {
         "workspaces3": [
+            "file:///media/vinayak/Extreme%20SSD/Code",
             "file:///home/vinayak/Code",
-            "file:///home/vinayak/.config/i3",
-            "file:///home/vinayak/Sem_4/Software%20Eng/Java%20Programs",
-            "file:///home/vinayak/GAN/Pix2Pix",
-            "file:///home/vinayak/GAN",
-            "file:///home/vinayak/project_big",
-            "file:///home/vinayak/newtt/main",
-            "file:///home/vinayak/dotfiles",
-            "file:///home/vinayak/newtt",
-            "file:///home/vinayak/study-from-home",
-            "file:///home/vinayak/timetable",
-            "file:///home/vinayak/books",
-            "file:///home/vinayak/Sem_4",
-            "file:///home/vinayak/Code/Spoj",
-            "file:///home/vinayak/Sem_4/Networking/Lab/BlockChain",
-            "file:///home/vinayak/Sem_4/Operating%20Systems/Tutorial"
+            "file:///home/vinayak"
         ],
         "files2": [
-            "file:///home/vinayak/.config/polybar/config",
-            "file:///home/vinayak/.config/i3/config",
-            "file:///home/vinayak/Documents/Programming/scripts/todo/todo.sh",
-            "file:///home/vinayak/.config/polybar/cin",
-            "file:///home/vinayak/.config/i3/bl.sh",
-            "file:///home/vinayak/.local/bin/betterlockscreen",
-            "file:///home/vinayak/lock/betterlockscreen",
-            "file:///home/vinayak/.local/bin/bet",
-            "file:///home/vinayak/.config/i3/bl_2.sh",
-            "file:///home/vinayak/lock/simo/.config/dunst/dunstrc",
-            "file:///home/vinayak/.config/rofi/themes/simonvic_dunstActions.rasi",
             "file:///home/vinayak/.config/dunst/dunstrc",
-            "file:///home/vinayak/lock/i3lock-color/lock.sh",
-            "file:///home/vinayak/.config/polybar/spotify.sh",
-            "file:///home/vinayak/.config/compton.conf",
-            "file:///home/vinayak/.config/rofi/themes/simonvic_fullscreen_reverse.rasi",
-            "file:///home/vinayak/lock/simo/.config/i3/scripts/volume.sh",
-            "file:///home/vinayak/.config/rofi/scripts/time.sh",
-            "file:///home/vinayak/.config/rofi/scripts/quicklinks.sh",
-            "file:///home/vinayak/.config/rofi/scripts/mpd.sh",
-            "file:///home/vinayak/.config/rofi/scripts/network.sh",
-            "file:///home/vinayak/.config/rofi/scripts/volume.sh",
-            "file:///home/vinayak/.config/rofi/scripts/menu_volume.sh",
-            "file:///home/vinayak/heroku_uploads/vini7148_tt/main/settings.py",
-            "file:///home/vinayak/heroku_uploads/vini7148_tt/manage.py",
-            "file:///home/vinayak/.config/rofi/scripts/powermenu.sh",
-            "file:///home/vinayak/.config/rofi/scripts/backlight.sh",
-            "file:///home/vinayak/lock/simo/.config/i3/config",
-            "file:///home/vinayak/Documents/Programming/scripts/todo/todo.txt",
-            "file:///home/vinayak/Documents/Programming/scripts/battery-manager/battery.sh",
-            "file:///home/vinayak/.config/nitrogen/bg-saved.cfg",
+            "file:///home/vinayak/.config/i3/config",
+            "file:///home/vinayak/autobri.sh",
+            "file:///home/vinayak/.config/rofi/scripts/menu_apps.sh",
+            "file:///home/vinayak/.config/polybar/config",
+            "file:///home/vinayak/.config/i3/scripts/polybar_tablet",
+            "file:///home/vinayak/.config/i3/scripts/polybar_wrapper",
+            "file:///home/vinayak/.config/i3/scripts/normal_mode",
+            "file:///home/vinayak/lock/ub_dot/.config/i3/scripts/normal_mode",
+            "file:///home/vinayak/lock/ub_dot/.config/i3/scripts/launcher.sh",
+            "file:///home/vinayak/.config/i3/scripts/lockscreen.sh",
+            "file:///home/vinayak/hello.cpp",
             "file:///home/vinayak/.config/nvim/init.vim",
-            "file:///home/vinayak/.config/nvim/plugins.vim",
-            "file:///home/vinayak/.config/nvim/lightline.vim",
-            "file:///home/vinayak/.config/nvim/keybindings.vim",
-            "file:///home/vinayak/lock/dt_nvim/bspwm/.config/nvim/themes/airline.vim",
-            "file:///home/vinayak/lock/dt_nvim/bspwm/.config/nvim/init.vim",
-            "file:///home/vinayak/lock/dt_nvim/bspwm/.config/nvim/vim-plug/plugins.vim",
-            "file:///home/vinayak/.config/nvim/statusline.vim",
-            "file:///home/vinayak/.config/ranger/rc.conf",
-            "file:///home/vinayak/.config/polybar/i3wmthemer_bar_launch.sh",
-            "file:///home/vinayak/.zshrc",
-            "file:///home/vinayak/.vim/.vimrc",
-            "file:///home/vinayak/.config/compton",
-            "file:///home/vinayak/Code/Spoj/prime.cpp",
-            "file:///media/vinayak/COMMON/GAN/Pix2Pix/Pix2Pix.ipynb",
-            "file:///etc/xdg/glava/circle/1.frag",
-            "file:///home/vinayak/.config/i3/bat_war.sh",
-            "file:///home/vinayak/.config/i3/bat.sh",
-            "file:///home/vinayak/.config/i3/bat",
-            "file:///home/vinayak/lock/screenshot-actions/Makefile",
-            "file:///home/vinayak/lock/screenshot-actions/screenshot_actions.sh",
-            "file:///home/vinayak/lock/screenshot-actions/screenshot.sh",
-            "file:///home/vinayak/etc/apt/sources.list",
-            "file:///home/vinayak/sources.list",
-            "file:///home/vinayak/etc/sources.list",
-            "file:///home/vinayak/.config/polybar/config_0",
-            "file:///home/vinayak/.config/polybar/launch.sh",
-            "file:///home/vinayak/.config/polybar/config_3",
-            "file:///home/vinayak/.config/polybar/config_2",
-            "file:///home/vinayak/Programs/gra_t.cpp",
-            "file:///proc/cpuinfo",
-            "file:///etc/default/saned",
-            "file:///etc/default/cron",
-            "file:///etc/default/cpufrequtils",
-            "file:///sys/devices/uncore_cbox_0/cpumask",
-            "file:///sys/devices/cpu/subsystem/drivers_autoprobe",
-            "file:///sys/devices/cpu/perf_event_mux_interval_ms",
-            "file:///sys/devices/cpu/freeze_on_smi",
-            "file:///sys/devices/cpu/caps/branches",
-            "file:///sys/devices/cpu/caps/pmu_name",
-            "file:///sys/devices/cpu/caps/max_precise",
-            "file:///sys/devices/cpu/power/autosuspend_delay_ms",
-            "file:///sys/devices/cpu/power/async",
-            "file:///sys/devices/cpu/power/runtime_usage",
-            "file:///sys/devices/cpu/power/runtime_suspended_time",
-            "file:///sys/devices/cpu/power/runtime_status",
-            "file:///sys/devices/cpu/power/runtime_enabled",
-            "file:///sys/devices/cpu/power/runtime_active_time",
-            "file:///sys/devices/cpu/power/runtime_active_kids",
-            "file:///sys/devices/cpu/power/control",
-            "file:///sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
-            "file:///sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
-            "file:///home/vinayak/lock/rofi-blocks/Makefile.am",
-            "file:///home/vinayak/lock/rofi-blocks/configure.ac",
-            "file:///home/vinayak/.config/i3/briup.sh",
-            "file:///home/vinayak/.config/i3/scripts/brightness.sh",
-            "file:///home/vinayak/cuda_ex.cu",
-            "file:///home/vinayak/Sem_4/Software%20Eng/Java%20Programs/c1.cpp",
-            "file:///tmp/crontab.axMoHB/crontab",
-            "file:///tmp/crontab.eaaj9W/crontab",
-            "file:///tmp/crontab.bGJBi8/crontab",
-            "file:///home/vinayak/GAN/Pix2Pix/Pix2Pix.ipynb",
-            "file:///home/vinayak/Halite.io/c%2B%2B/MyBot.cpp",
-            "file:///home/vinayak/Code/KickStart2019Prac/mural.cpp",
-            "file:///home/vinayak/Code/KickStart2019Prac/NoGuess.cpp",
-            "file:///home/vinayak/dotfiles/README.md",
-            "file:///home/vinayak/test.cpp",
-            "file:///home/vinayak/.config/polybar/nvgpu.sh",
-            "file:///home/vinayak/heroku_uploads/vini7148_tt/app1/templates/app1/include/footer.html"
+            "file:///home/vinayak/lock/betterlockscreen/betterlockscreen",
+            "file:///home/vinayak/.local/bin/betterlockscreen",
+            "file:///media/vinayak/Recovery%28Ext.%29/vinayak_1/vinayak/.local/bin/betterlockscreen",
+            "file:///home/vinayak/Code/ak.cpp",
+            "file:///home/vinayak/.config/compton.conf"
         ]
     },
     "lastKnownMenubarData": {
@@ -156,7 +61,8 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor"
+                                    "label": "&&Reopen Closed Editor",
+                                    "enabled": false
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -165,6 +71,18 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///media/vinayak/Extreme%20SSD/Code",
+                                        "path": "/media/vinayak/Extreme SSD/Code",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/media/vinayak/Extreme SSD/Code"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/vinayak/Code",
                                         "path": "/home/vinayak/Code",
                                         "scheme": "file"
                                     },
@@ -175,94 +93,59 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/home/vinayak/.config/i3",
+                                        "external": "file:///home/vinayak",
+                                        "path": "/home/vinayak",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.config/i3"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/Sem_4/Software Eng/Java Programs",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/Sem_4/Software Eng/Java Programs"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/GAN/Pix2Pix",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/GAN/Pix2Pix"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/GAN",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/GAN"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/project_big",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/project_big"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/newtt/main",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/newtt/main"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/dotfiles",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/dotfiles"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/newtt",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/newtt"
-                                },
-                                {
-                                    "id": "openRecentFolder",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/study-from-home",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/study-from-home"
+                                    "label": "/home/vinayak"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/vinayak/.config/dunst/dunstrc",
+                                        "path": "/home/vinayak/.config/dunst/dunstrc",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/dunst/dunstrc"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/vinayak/.config/i3/config",
+                                        "path": "/home/vinayak/.config/i3/config",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/i3/config"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/vinayak/autobri.sh",
+                                        "path": "/home/vinayak/autobri.sh",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/autobri.sh"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/vinayak/.config/rofi/scripts/menu_apps.sh",
+                                        "path": "/home/vinayak/.config/rofi/scripts/menu_apps.sh",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/rofi/scripts/menu_apps.sh"
                                 },
                                 {
                                     "id": "openRecentFile",
@@ -279,91 +162,56 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/home/vinayak/.config/i3/config",
+                                        "external": "file:///home/vinayak/.config/i3/scripts/polybar_tablet",
+                                        "path": "/home/vinayak/.config/i3/scripts/polybar_tablet",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.config/i3/config"
+                                    "label": "~/.config/i3/scripts/polybar_tablet"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/home/vinayak/Documents/Programming/scripts/todo/todo.sh",
+                                        "external": "file:///home/vinayak/.config/i3/scripts/polybar_wrapper",
+                                        "path": "/home/vinayak/.config/i3/scripts/polybar_wrapper",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/Documents/Programming/scripts/todo/todo.sh"
+                                    "label": "~/.config/i3/scripts/polybar_wrapper"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/home/vinayak/.config/polybar/cin",
+                                        "external": "file:///home/vinayak/.config/i3/scripts/normal_mode",
+                                        "path": "/home/vinayak/.config/i3/scripts/normal_mode",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.config/polybar/cin"
+                                    "label": "~/.config/i3/scripts/normal_mode"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/home/vinayak/.config/i3/bl.sh",
+                                        "external": "file:///home/vinayak/lock/ub_dot/.config/i3/scripts/normal_mode",
+                                        "path": "/home/vinayak/lock/ub_dot/.config/i3/scripts/normal_mode",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.config/i3/bl.sh"
+                                    "label": "~/lock/ub_dot/.config/i3/scripts/normal_mode"
                                 },
                                 {
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
-                                        "path": "/home/vinayak/.local/bin/betterlockscreen",
+                                        "external": "file:///home/vinayak/lock/ub_dot/.config/i3/scripts/launcher.sh",
+                                        "path": "/home/vinayak/lock/ub_dot/.config/i3/scripts/launcher.sh",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "~/.local/bin/betterlockscreen"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/lock/betterlockscreen",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/lock/betterlockscreen"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/.local/bin/bet",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.local/bin/bet"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/.config/i3/bl_2.sh",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/.config/i3/bl_2.sh"
-                                },
-                                {
-                                    "id": "openRecentFile",
-                                    "uri": {
-                                        "$mid": 1,
-                                        "path": "/home/vinayak/lock/simo/.config/dunst/dunstrc",
-                                        "scheme": "file"
-                                    },
-                                    "enabled": true,
-                                    "label": "~/lock/simo/.config/dunst/dunstrc"
+                                    "label": "~/lock/ub_dot/.config/i3/scripts/launcher.sh"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -402,8 +250,7 @@
                     },
                     {
                         "id": "workbench.action.files.saveAs",
-                        "label": "Save &&As...",
-                        "enabled": false
+                        "label": "Save &&As..."
                     },
                     {
                         "id": "workbench.action.files.saveAll",
@@ -1155,7 +1002,7 @@
                                     "label": "&&Function Breakpoint..."
                                 },
                                 {
-                                    "id": "editor.debug.action.toggleLogPoint",
+                                    "id": "editor.debug.action.addLogPoint",
                                     "label": "&&Logpoint..."
                                 }
                             ]
@@ -1753,11 +1600,9 @@
             }
         }
     },
-    "theme": "vs-dark",
-    "themeBackground": "#212121",
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/vinayak/.config/Code/Backups/1590603837103",
+            "backupPath": "/home/vinayak/.config/Code/Backups/1595697533137",
             "uiState": {
                 "mode": 1,
                 "x": 966,
@@ -1768,5 +1613,7 @@
         },
         "openedWindows": []
     },
-    "pickerWorkingDir": "/home/vinayak/GAN"
+    "theme": "vs-dark",
+    "themeBackground": "#212121",
+    "pickerWorkingDir": "/home"
 }

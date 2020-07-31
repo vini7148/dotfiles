@@ -26,12 +26,12 @@ dimStrength=60%
 
 # Available options: circle, bars
 indicatorType=circle
-indicatorPos=800:640
+indicatorPos=960:740
 timeString=%H:%M:%S
-timePos=800:440
+timePos=960:540
 timeSize=150
 dateString="%A,%d %B"
-datePos=800:470
+datePos=960:570
 dateSize=20
 verifyText=Verifying...
 wrongText=Wrong!

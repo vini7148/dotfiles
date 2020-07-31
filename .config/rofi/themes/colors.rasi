@@ -19,4 +19,4 @@
  *
  */
 
-@import "colorschemes/dark.rasi"
+@import "colorschemes/material-dark/blue_grey.rasi"

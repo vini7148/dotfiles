@@ -39,7 +39,7 @@ configuration {
 	*/
 	
 	text-color: @foreground;
-	accent: #F0544C;
+	accent: #607d8b;
 	active-background: @background;
 	active-foreground: @foreground;
 	normal-background: @background;
@@ -68,7 +68,8 @@ window {
 	width: 40%;
 	location: center;
 	anchor: north;
-	y-offset: -25%;
+	y-offset: -47%;
+	x-offset: 29%;
 	transparency: "real";
 	background-color: rgba(0,0,0,0.3);
 }

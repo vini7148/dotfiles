@@ -1,0 +1,218 @@
+#-----------------------------------------------------------------------------#
+#----------------------------- Global settings -------------------------------#
+#-----------------------------------------------------------------------------#
+
+[colors]
+include-file = ~/.config/polybar/colors
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[bar/top]
+monitor = ${env:MONITOR:eDP-1}
+enable-ipc = true
+override-redirect = false
+bottom = false
+
+height = 60
+width = 100%
+offset-y = 0
+fixed-center = true
+spacing = 1
+module-margin-left = 2
+module-margin-right = 2
+
+border-bottom-color = ${colors.primary}
+border-bottom-size = 4
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "DejaVu Sans:style=Bold:pixelsize=18;4"
+font-1 = "DejaVu Sans:pixelsize=18;4"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=24;4"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=24;4"
+font-4 = "Font Awesome 5 Brands:pixelsize=24;4"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = backlight volume battery date options_open
+padding-right = 2
+
+
+#------------------------------- Left modules --------------------------------#
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+
+strip-wsnumbers = true
+
+label-focused = %name%
+label-focused-background = ${colors.primary}
+label-focused-foreground = ${colors.background}
+label-focused-underline  = ${colors.background-alt}
+label-focused-overline  = ${colors.background}
+label-focused-padding = 2
+
+label-unfocused = %name%
+label-unfocused-padding = 2
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-urgent = %name%
+label-urgent-background = ${colors.urgent}
+label-urgent-overline  = ${colors.background}
+label-urgent-padding = 2
+
+label-empty = %name%
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 2
+
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-visible = %name%
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+
+#------------------------------ Center modules -------------------------------#
+
+[module/xwindow]
+type = internal/xwindow
+label = %{T2}%title:0:30:...%%{T-}
+
+#-----------------------------=- Right modules -------------------------------#
+
+[module/song]
+type = custom/script
+exec = ~/bin/music get_title
+format = "%{T2}<label>%{T-}"
+interval = 3
+
+[module/options_open]
+type = custom/text
+content-foreground = ${colors.foreground}
+content = ""
+click-left = ~/.config/i3/scripts/polybar_wrapper options
+
+[module/options_close]
+type = custom/text
+content-foreground = ${colors.primary}
+content = ""
+click-left = ~/.config/i3/scripts/polybar_wrapper options
+
+
+[module/date]
+type = internal/date
+interval = 5
+time = %H:%M
+format-prefix ="  "
+format-prefix-foreground = ${colors.foreground}
+label = "%time% "
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = "<animation-charging> <label-charging> "
+format-discharging = "<ramp-capacity> <label-discharging> "
+format-full-prefix = "  "
+format-full-prefix-foreground = ${colors.foreground}
+
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-foreground = ${colors.foreground}
+
+animation-charging-0 = "  "
+animation-charging-1 = "  "
+animation-charging-2 = "  "
+animation-charging-3 = "  "
+animation-charging-4 = "  "
+animation-charging-foreground = ${colors.foreground}
+animation-charging-framerate = 750
+
+[module/volume]
+type = custom/ipc
+hook-0 = $HOME/.config/i3/scripts/polybar_modules/volume icon
+scroll-up = $HOME/.config/i3/scripts/polybar_modules/volume increase
+scroll-down = $HOME/.config/i3/scripts/polybar_modules/volume decrease
+click-left = $HOME/.config/i3/scripts/polybar_modules/volume mute
+initial = 1
+
+[module/backlight]
+type = custom/ipc
+format-prefix = " "
+hook-0 = $HOME/.config/i3/scripts/polybar_modules/backlight get
+scroll-up = $HOME/.config/i3/scripts/polybar_modules/backlight increase
+scroll-down = $HOME/.config/i3/scripts/polybar_modules/backlight decrease
+initial = 1
+
+#-----------------------------------------------------------------------------#
+#---------------------------- Side panel config- -----------------------------#
+#-----------------------------------------------------------------------------#
+[bar/panel]
+monitor = ${env:MONITOR:eDP-1}
+enable-ipc = true
+override-redirect = true
+bottom = false
+
+height = 1532 # 1600 - bar height - 2*border width
+width = 25%
+offset-y = 60
+offset-x = 75%
+fixed-center = true
+spacing = 1
+module-margin-left = 2
+module-margin-right = 2
+
+border-color = ${colors.primary}
+border-size = 4
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-0 = "Font Awesome 5 Free:style=Solid:pixelsize=24;-730"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=24;-730"
+font-2 = "Font Awesome 5 Brands:pixelsize=24;-730"
+
+modules-center = screenshot rotate exit chromeos lock
+
+#------------------------------ Option modules -------------------------------#
+[module/chromeos]
+type = custom/text
+content = "  "
+click-left = xdotool key control+alt+shift+F1 
+
+
+[module/exit]
+type = custom/text
+content = "  "
+click-left = i3-msg exit
+
+[module/lock]
+type = custom/text
+content = "  "
+click-left = ~/.config/i3/scripts/betterlockscreen -l blur
+
+[module/rotate]
+type = custom/text
+content = "  "
+click-left = ~/bin/tablet_mode
+
+[module/screenshot]
+type = custom/text
+content = "  "
+click-left = scrot -e 'feh $f -x' --delay 1
+
+

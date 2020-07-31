@@ -56,7 +56,8 @@ function buildBar {
 }
 
 function sendNotification {
-  volume=`getVolume`
+  vol=`getVolume`
+  volume=$(( vol ))
 
 	# Building the volume bar
 	body="`buildBar 5 $volume false`\t<b>$volume%</b>\t"

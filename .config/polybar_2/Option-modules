@@ -1,0 +1,724 @@
+#-----------------------------------------------------------------------------#
+#--------------------------- Application modules -----------------------------#
+[module/chrome]
+type = custom/text
+content = "  "
+click-left = firefox
+
+[module/FileManager]
+type = custom/text
+content = "  "
+click-left = thunar
+
+[module/Facebook]
+type = custom/text
+content = "  "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch Facebook
+
+[module/twitter]
+type = custom/text
+content = "  "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch twitter
+
+[module/github]
+type = custom/text
+content = "  "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch github
+
+[module/gmail]
+type = custom/text
+content = "  "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch gmail
+
+[module/unixporn]
+type = custom/text
+content = "  "
+click-left = /home/uriel/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch unixporn
+
+[module/youtube]
+type = custom/text
+content = "  "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch youtube
+
+
+#-----------------------------------------------------------------------------#
+#------------------------------ Power modules -------------------------------#
+#-----------------------------------------------------------------------------#
+[module/logout]
+type = custom/text
+content = "  "
+click-left = /usr/bin/gnome-session-quit --logout
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+;content-underline = ${colors.bg}
+;content-overline = ${colors.bg}
+
+[module/lock]
+type = custom/text
+content = "  "
+click-left = /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+;content-underline = ${colors.bg}
+;content-overline = ${colors.bg}
+
+[module/power]
+type = custom/text
+content = "  "
+click-left = /usr/bin/gnome-session-quit --power-off
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+;content-underline = ${colors.bg}
+;content-overline = ${colors.bg}
+
+[module/reboot]
+type = custom/text
+content = "  "
+click-left = /usr/bin/gnome-session-quit --reboot
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+;content-underline = ${colors.bg}
+;content-overline = ${colors.bg}
+
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+
+[module/vol_up]
+type = custom/text
+content = "  "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/volume increase
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+
+[module/vol_down]
+type = custom/text
+content ="    "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/volume decrease
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+
+[module/volume]
+type = custom/ipc
+hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/volume slider
+format = %{T5}<output>%{T-}
+initial = 1
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/volume mute
+format-background = ${colors.bg}
+
+[module/backlight_up]
+type = custom/text
+content = "  "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/backlight increase
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+
+[module/backlight_down]
+type = custom/text
+content ="   "
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/backlight decrease
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+
+[module/backlight]
+type = custom/ipc
+hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/backlight slider
+format = %{T5}<output>%{T-}
+format-background = ${colors.bg}
+initial = 1
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+[module/mpd-next]
+type = internal/mpd
+interval = 2
+format-online =<icon-next>
+format-online-background = ${colors.bg}
+format-online-underline = ${colors.background}
+format-online-overline= ${colors.background}
+format-online-foreground = ${colors.fg}
+format-online-padding = 1
+label-song = " %artist% "
+;
+label-song-maxlen = 25
+label-song-ellipsis = true
+label-offline = "MPD is offline"
+icon-next = " "
+icon-next-foreground =${colors.fg}
+
+[module/mpd-play]
+type = internal/mpd
+interval = 2
+format-online =<icon-play>
+format-online-background = ${colors.bg}
+format-online-underline = ${colors.background}
+format-online-overline= ${colors.background}
+format-online-foreground = ${colors.fg}
+format-online-padding = 1
+label-song = " %artist% "
+;
+label-song-maxlen = 25
+label-song-ellipsis = true
+label-offline = "MPD is offline"
+icon-play = ""
+icon-play-foreground =${colors.fg}
+;icon-play-background =${colors.background-}
+
+[module/mpd-stop]
+type = internal/mpd
+interval = 2
+format-online =<icon-stop>
+format-online-background = ${colors.bg}
+format-online-underline = ${colors.background}
+format-online-overline= ${colors.background}
+format-online-foreground = ${colors.fg}
+format-online-padding = 1
+label-song = " %artist% "
+;
+label-song-maxlen = 25
+label-song-ellipsis = true
+label-offline = "MPD is offline"
+;icon-pause = "  "
+icon-stop = ""
+icon-stop-foreground =${colors.fg}
+icon-stop-background =${colors.bg}
+
+[module/mpd-prev]
+type = internal/mpd
+interval = 2
+format-online = <icon-prev>
+format-online-background = ${colors.bg}
+format-online-underline = ${colors.background}
+format-online-overline= ${colors.background}
+format-online-foreground = ${colors.fg}
+format-online-padding = 1
+label-song = " %artist% "
+;
+label-song-maxlen = 25
+label-song-ellipsis = true
+label-offline = "MPD is offline"
+icon-prev = ""
+icon-prev-foreground =${colors.fg}
+toggle-on-foreground = ${colors.fg}
+toggle-off-foreground = ${colors.foreground}
+
+[module/mpd]
+type = internal/mpd
+interval = 2
+format-online =<label-song>
+format-online-background = ${colors.bg}
+format-online-underline = ${colors.background}
+format-online-overline= ${colors.background}
+format-online-foreground = ${colors.fg}
+format-online-padding = 1
+label-song = ".:: %artist% ::."
+; 
+label-song-maxlen = 55
+label-song-ellipsis = true
+label-offline = "MPD is offline"
+
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+
+[module/style]
+type = custom/text
+content = " Style"
+content-background = ${colors.bg}
+content-foreground = ${colors.fg}
+;content-overline = ${colors.bg}
+content-underline = ${colors.fg}
+content-padding = 0
+click-left = ~/.config/polybar/scripts/styles.sh --Light
+click-right = ~/.config/polybar/scripts/styles.sh --Dark
+click-center = ~/.config/regolith/i3/scripts/polybar_modules/tablet_options toggle
+
+[module/wifi]
+type = custom/text
+content = "         "
+click-left = gnome-control-center wifi
+content-background = ${colors.foreground-alt}
+content-foreground = ${colors.background-alt}
+content-underline = ${colors.bg}
+content-overline = ${colors.bg}
+
+[module/bluetooth]
+type = custom/text
+content = "           "
+click-left = gnome-control-center bluetooth
+content-background = ${colors.foreground-alt}
+content-foreground = ${colors.background-alt}
+content-underline = ${colors.bg}
+content-overline = ${colors.bg}
+
+[module/dunst]
+type = custom/ipc
+initial = 1
+format-foreground = ${colors.background-alt}
+format-background = ${colors.foreground-alt}
+format-underline = ${colors.bg}
+format-overline = ${colors.bg}
+
+hook-0 = echo "%{A1:notify-send "DUNST_COMMAND_PAUSE" && polybar-msg hook dunst 2:}     %{A}     "
+hook-1 = echo "%{A1:notify-send "DUNST_COMMAND_RESUME" && polybar-msg hook dunst 1:}     %{A}     "
+
+[module/display]
+type = custom/text
+content = "        "
+click-left = gnome-control-center display
+content-background = ${colors.foreground-alt}
+content-foreground = ${colors.background-alt}
+content-underline = ${colors.bg}
+content-overline = ${colors.bg}
+
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+#----------------------------- Primary modules -------------------------------#
+[module/applauncher]
+type = custom/ipc
+hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher icon
+initial = 1
+format = <output>
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher toggle
+format-background = ${colors.bg}
+format-foreground = ${colors.foreground}
+;format-overline = ${colors.background}
+;format-underline = ${colors.background}
+
+[module/option_menu]
+type = custom/ipc
+hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/tablet_options icon
+initial = 1
+click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_options toggle
+format-background = ${colors.bg}
+;format-underline = ${colors.foreground}
+
+#-----------------------------------------------------------------------------#
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = " "
+
+label-mode-padding = 2
+label-mode-foreground = #2f343f
+label-mode-background = #cb6077
+
+label-focused = %name% : %icon%
+label-focused-background = ${colors.bg}
+label-focused-foreground = #595959
+;label-focused-underline = #e4bc87
+label-focused-padding = 3
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name% : %icon%
+label-unfocused-padding = 3
+label-unfocused-background = ${colors.bg}
+label-unfocused-foreground = ${colors.background}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = 3
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-background = ${self.label-focused-background}
+label-urgent-foreground = #cb6077
+label-urgent-padding = 3
+
+#-----------------------------------------------------------------------------#
+[module/date]
+type = internal/date
+interval = 5
+time = "%H"
+format-foreground = ${colors.primary}
+format-background = ${colors.bg}
+label = "%time% "
+
+[module/date1]
+type = internal/date
+interval = 5
+time = ":%M"
+format-foreground = ${colors.foreground}
+format-background = ${colors.bg}
+label = "%time% "
+
+[module/date2]
+type = internal/date
+interval = 5
+format-prefix = " "
+f;ormat-prefix-underline = ${colors.bg}
+time = "%H:%M "
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+;format-underline = ${colors.fg}
+label = "%time% "
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+format-charging = "<animation-charging> <label-charging> "
+format-discharging = "<ramp-capacity> <label-discharging> "
+format-full-prefix = "  "
+format-full-prefix-foreground = ${colors.foreground}
+format-full-prefix-underline = ${colors.foreground}
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-foreground = ${colors.foreground}
+animation-charging-0 = "  "
+animation-charging-1 = "  "
+animation-charging-2 = "  "
+animation-charging-3 = "  "
+animation-charging-4 = "  "
+animation-charging-foreground = ${colors.foreground}
+animation-charging-framerate = 750
+
+
+[module/keyboard]
+type = custom/ipc
+hook-0 = ~/bin/onscreen_keyboard icon
+initial = 1
+click-left = ~/bin/onscreen_keyboard toggle
+format-background = ${colors.bg}
+
+[module/add_workspace]
+type = custom/text
+content = " "
+click-left = ~/bin/next_workspace
+
+[module/xwindow]
+type = internal/xwindow
+label = %{T2}%title:0:30:...%%{T-}
+label-background = ${colors.background-alt}
+label-foreground = ${colors.foreground}
+label-underline = ${colors.background}
+label-overline = ${colors.background}
+click-left = rofi -show drun -theme drun -font "Noto Sans 8"  -lines 13 -xoffset 30 -yoffset -10 -padding 18 -width 370 -location 2
+
+#-----------------------------------------------------------------------------#
+[module/right]
+type = custom/text
+content-background = ${colors.bg}
+content-foreground = ${colors.background}
+content = "%{T3}%{T-}"
+;; content-underline = ${colors.background}
+;; content-overline = ${colors.background}
+
+[module/right1]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.bg}
+content = "%{T3}%{T-}"
+
+[module/left]
+type = custom/text
+content-background = ${colors.bg}
+content-foreground = ${colors.background}
+content ="%{T3}%{T-}"
+;content-underline = ${colors.background}
+;content-overline = ${colors.background}
+
+[module/left1]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.bg}
+content ="%{T3}%{T-}"
+;content-underline = ${colors.background}
+;content-overline = ${colors.background}
+
+[module/right2]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.background-alt}
+content = " %{T3}%{T-}"
+;content-underline = ${colors.background}
+;content-overline = ${colors.background}
+click-left = ~/.config/i3/scripts/launcher.sh
+
+[module/left2]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.background-alt}
+content ="%{T3}%{T-}"
+;content-underline = ${colors.background}
+;content-overline = ${colors.background}
+click-left = ~/.config/i3/scripts/launcher.sh
+
+#-----------------------------------------------------------------------------#
+[module/network2]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/check-network
+click-left = networkmanager_dmenu &
+click-right = networkmanager_dmenu &
+tail = true
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+;format-overline = ${colors.bg}
+format-underline = ${colors.foreground}
+
+[module/network]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/check-network
+click-left = networkmanager_dmenu &
+click-right = networkmanager_dmenu &
+tail = true
+format-background = ${colors.bg}
+format-foreground = ${colors.fg}
+;format-overline = ${colors.bg}
+format-underline = ${colors.fg}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "   "
+format-prefix-foreground = ${colors.fg}
+format-prefix-background = ${colors.bg}
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+label = " %percentage:2%%    "
+label-background = ${colors.bg}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "  "
+format-prefix-foreground = ${colors.fg}
+format-prefix-background = ${colors.bg}
+format-foreground = ${colors.fg}
+format-background = ${colors.bg}
+label = "%percentage_used%%  "
+label-background = ${colors.bg}
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+warn-temperature = 60
+units = true
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+label = " %temperature-c% "
+label-background = #4a1f1f
+label-overline = ${colors.bg}
+label-underline = ${colors.bg}
+label-warn = " %temperature-c% "
+label-warn-foreground = ${colors.foreground}
+ramp-0 =""
+ramp-1 =""
+ramp-2 =""
+ramp-foreground  = ${colors.primary}
+ramp-background  = ${colors.bg}
+#-----------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------#
+[module/volume_bar]
+type = internal/alsa
+format-volume = <ramp-volume> <bar-volume> <label-volume>
+format-muted = <label-muted>
+label-volume = " + "
+format-volume-background = ${colors.bg}
+format-volume-foreground = ${colors.fg}
+format-muted-prefix = X
+format-muted-prefix-background = ${colors.bg}
+label-muted = " MUTED"
+label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.bg}
+ramp-volume-0 ="-"
+ramp-volume-1 ="-"
+ramp-volume-2 ="-"
+ramp-volume-3 ="-"
+ramp-volume-4 ="-"
+bar-volume-width = 10
+bar-volume-gradient = true
+bar-volume-indicator = "%{T3}━%{T-}"
+bar-volume-indicator-foreground = ${colors.primary}
+bar-volume-indicator-font = 2
+bar-volume-fill ="%{T3}━%{T-}"
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-fill-font = 0
+bar-volume-empty ="%{T3}━%{T-}"
+bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-font = 5
+ramp-headphones-0 ="  "
+ramp-headphones-1 ="  "
+
+#-----------------------------------------------------------------------------#
+
+[module/mpd_bar2]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 1
+format-online = <label-time>
+label-time = "  %total%"
+label-time-foreground = ${colors.fg}
+label-time-background = ${colors.bg}
+label-offline = "mpd is offline"
+
+#-----------------------------------------------------------------------------#
+[module/mpd_bar]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 1
+format-online = <label-song> <bar-progress>
+label-song = "  "
+label-song-foreground = ${colors.fg}
+label-song-background = ${colors.bg}
+label-time ="%total%"
+label-time-foreground = ${colors.fg}
+label-time-background = ${colors.bg}
+label-offline = "mpd is offline"
+bar-progress-width =9
+bar-progress-background = ${colors.bg}
+bar-progress-foreground = ${colors.fg}
+bar-progress-gradient = false
+bar-progress-indicator = "▰"
+bar-progress-indicator-foreground = ${colors.background-alt}
+bar-progress-indicator-background = ${colors.bg}
+bar-progress-indicator-font = 0
+bar-progress-fill ="▰▰"
+bar-progress-fill-background= ${colors.bg}
+bar-progress-fill-foreground= ${colors.fg}
+bar-progress-foreground-0 = ${colors.background-alt}
+bar-progress-background-0 = ${colors.bg}
+bar-progress-foreground-1 = ${colors.background-alt}
+bar-progress-background-1 = ${colors.bg}
+bar-progress-foreground-2 = ${colors.background-alt}
+bar-progress-background-2 = ${colors.bg}
+bar-progress-foreground-3 = ${colors.background-alt}
+bar-progress-background-3 = ${colors.bg}
+bar-progress-foreground-4 = ${colors.background-alt}
+bar-progress-background-4 = ${colors.bg}
+bar-progress-foreground-5 = ${colors.background-alt}
+bar-progress-background-5 = ${colors.bg}
+bar-progress-foreground-6 = ${colors.background-alt}
+bar-progress-background-6 = ${colors.bg}
+bar-progress-foreground-7 = ${colors.background-alt}
+bar-progress-background-7 = ${colors.bg}
+bar-progress-foreground-8 = ${colors.background-alt}
+bar-progress-background-8 = ${colors.bg}
+bar-progress-fill-font = 0
+bar-progress-empty ="▰▰"
+bar-progress-empty-foreground = ${colors.foreground-alt}
+bar-progress-empty-background = ${colors.bg}
+bar-progress-empty-font = 0
+
+#-----------------------------------------------------------------------------#
+
+[module/memory_bar]
+type = internal/memory
+interval = 2
+format = <bar-used>
+format-prefix =  "   "
+format-prefix-foreground = ${colors.fg}
+format-prefix-background = ${colors.bg}
+;format-prefix-overline = ${colors.bg}
+;format-prefix-underline = ${colors.bg}
+label = " %mb_used% "
+label-foreground = ${colors.foreground}
+label-background = ${colors.bg}
+;label-overline = ${colors.bg}
+;label-underline = ${colors.bg}
+bar-used-width = 25
+bar-used-gradient = false
+bar-used-indicator =  █
+bar-used-indicator-foreground = ${colors.primary}
+bar-used-indicator-background = ${colors.bg}
+;bar-used-indicator-overline = ${colors.bg}
+;bar-used-indicator-underline = ${colors.bg}
+bar-used-indicator-font = 1
+bar-used-fill = "%{T3}█%{T-}"
+bar-used-fill-background = ${colors.bg}
+;bar-used-fill-overline = ${colors.bg}
+;bar-used-fill-underline = ${colors.bg}
+bar-used-foreground-0 = ${colors.primary}
+bar-used-foreground-1 = ${colors.primary}
+bar-used-foreground-2 = ${colors.primary}
+bar-used-foreground-3 = ${colors.primary}
+bar-used-foreground-4 = ${colors.primary}
+bar-used-foreground-5 = ${colors.primary}
+bar-used-foreground-6 = ${colors.primary}
+bar-used-foreground-7 = ${colors.primary}
+bar-used-foreground-8 = ${colors.primary}
+bar-used-fill-font = 0
+bar-used-empty = "%{T3}█%{T-}"
+bar-used-empty-foreground = ${colors.foreground-alt}
+bar-used-empty-background = ${colors.bg}
+;bar-used-empty-overline = ${colors.bg}
+;bar-used-empty-underline = ${colors.bg}
+bar-used-empty-font = 0
+
+#-----------------------------------------------------------------------------#
+
+[module/cpu_bar]
+type = internal/cpu
+interval = 0.5
+format = <bar-load>
+format-prefix = "   "
+format-prefix-foreground = ${colors.fg}
+format-prefix-background = ${colors.bg}
+label-foreground = ${colors.fg}
+label-background = ${colors.bg}
+label = "%percentage%%"
+bar-load-width = 25
+bar-load-gradient = false
+
+bar-load-indicator ="█"
+bar-load-indicator-foreground = ${colors.primary}
+bar-load-indicator-background = ${colors.bg}
+bar-load-indicator-font = 1
+
+bar-load-fill ="█"
+
+bar-load-fill-background = ${colors.bg}
+
+bar-load-foreground-0 = ${colors.primary}
+bar-load-background-0 = ${colors.background}
+bar-load-foreground-1 = ${colors.primary}
+bar-load-background-1 = ${colors.background}
+bar-load-foreground-2 = ${colors.primary}
+bar-load-background-2 = ${colors.background}
+bar-load-foreground-3 = ${colors.primary}
+bar-load-background-3 = ${colors.background}
+bar-load-foreground-4 = ${colors.primary}
+bar-load-background-4 = ${colors.background}
+bar-load-fill-font = 1
+
+bar-load-empty ="█"
+bar-load-empty-foreground = ${colors.foreground-alt}
+bar-load-empty-background = ${colors.bg}
+bar-load-empty-font = 1
+
+[module/polywins]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/polywins.sh
+tail = true
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}

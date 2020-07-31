@@ -1,0 +1,13 @@
+{
+    "config_version": 5,
+    "editor": {
+        "activate_on_save": true,
+        "live_preview": true,
+        "live_switch": true,
+        "scaling": "2.5"
+    },
+    "tray_icon": {
+        "type": "builtin",
+        "value": "2"
+    }
+}

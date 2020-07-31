@@ -3,7 +3,7 @@ set $mod Mod4
 new_window pixel 1
 new_float normal
 
-# border_radius 7
+# border_radius 3
 
 hide_edge_borders none
 
@@ -165,12 +165,15 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 # for_window [class="Firefox" instance="Places"] floating enable
+for_window [title="Battery Warning"] sticky enable
 
 # to bind windows to a workspace
 assign [class="Spotify"] $ws8
+assign [class="Spotify"] 8
 # assign [class="spotify"] $ws8
 # assign [class="Spotify-free"] $ws8
 # assign [class="spotify-free"] $ws8
+for_window [class="Spotify"] move to workspace $ws8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -188,11 +191,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym l exec i3exit $HOME/.config/i3/scripts/lockscreen.sh --lock
+    bindsym s exec i3exit systemctl suspend
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym h exec --no-startup-id i3exit systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
@@ -244,6 +247,9 @@ exec_always --no-startup-id pkill compton; compton --blur-background
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id pkill polybar; $HOME/.config/polybar/i3wmthemer_bar_launch.sh
+
+# exec_always --no-startup-id normal_mode
+
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id pamac-tray
 exec_always --no-startup-id clipit 
@@ -263,6 +269,10 @@ gaps inner 10
 gaps outer 35
 
 smart_borders on
+smart_borders no_gaps
+border_radius 2
+
+# smart_borders on
 # smart_gaps off
 # smart_gaps on
 
@@ -330,7 +340,7 @@ bindsym $mod+Shift+Ctrl+t exec $HOME/Documents/Programming/scripts/todo/todo.sh 
 bindsym $mod+x exec betterlockscreen --lock blur
 # bindsym $mod+x exec --no-startup-id ~/.config/i3/bl.sh
 # bindsym $mod+x exec --no-startup-id ~/.config/i3/bl_1.sh
-# bindsym $mod+x exec $HOME/.config/i3/scripts/lockscreen.sh --lock
+bindsym $mod+Ctrl+x exec $HOME/.config/i3/scripts/lockscreen.sh --lock
 
 # Always mute microphone at startup, you know... FBI and stuff
 # exec_always amixer sset Capture nocap
@@ -339,7 +349,7 @@ bindsym $mod+x exec betterlockscreen --lock blur
 # exec_always amixer -c0 sset "Input Source" "Headset Mic"
 
 # for i3lock
-bindsym $mod+Shift+x exec i3lock -i /home/vinayak/Pictures/bg11.png -c '#000000'
+bindsym $mod+Shift+x exec i3lock -i /home/vinayak/Pictures/bg11.png -c '#000000' -f
 # bindsym $mod+Shift+x exec i3lock -i /home/vinayak/Pictures/bg10.png -c '#000000'
 # bindsym $mod+Shift+x exec i3lock -i /home/vinayak/Pictures/bg2.png -c '#000000'
 # bindsym $mod+Shift+x exec /home/vinayak/i3lock-color/lock.sh
@@ -405,9 +415,34 @@ bindsym Ctrl+XF86AudioMute exec --no-startup-id $HOME/.config/i3/scripts/microph
 # bindsym $mod+Shift+b exec sudo bash -c 'for i in {0..11}; do cpufreq-set -c $i -g powersave; done'
 exec sudo bash -c 'for i in {0..11}; do cpufreq-set -c $i -g powersave; done'
 
+# Sreen brightness/temperature controls
+# -Ctrl is used to control the temperature
+# -Shift is used to change values at higher rate
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh increase
+# ; echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh decrease
+# ; echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh increase 10
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh decrease 10
+bindsym XF86ScreenSaver exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh set 1
+bindsym Shift+XF86ScreenSaver exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh set 100
+
+bindsym Ctrl+XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh redshift increase
+bindsym Ctrl+XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh redshift decrease
+bindsym Ctrl+Shift+XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh redshift increase 400
+bindsym Ctrl+Shift+XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh redshift decrease 400
+bindsym Ctrl+XF86ScreenSaver exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh redshift toggle
+
+# Media player controls
+bindsym XF86AudioPlay exec --no-startup-id $HOME/.config/i3/scripts/playerctl.sh play-pause
+# bindsym XF86AudioStop exec --no-startup-id $HOME/.config/i3/scripts/playerctl.sh stop
+bindsym XF86AudioNext exec --no-startup-id $HOME/.config/i3/scripts/playerctl.sh next
+bindsym XF86AudioPrev exec --no-startup-id $HOME/.config/i3/scripts/playerctl.sh previous
+bindsym $mod+XF86AudioPrev exec --no-startup-id $HOME/.config/i3/scripts/playerctl.sh info
+
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
-bindsym XF86MonBrightnessDown exec echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+# bindsym XF86MonBrightnessUp exec echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
+# bindsym XF86MonBrightnessDown exec echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 100)) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
 # bindsym XF86MonBrightnessUp exec --no-startup-id brightlight -i 20
 # bindsym XF86MonBrightnessDown exec --no-startup-id brightlight -d 20
@@ -416,12 +451,6 @@ bindsym XF86MonBrightnessDown exec echo $((`cat /sys/class/backlight/intel_backl
 # bindsym XF86MonBrightnessUp exec xrandr --output eDP-1 --brightness 1.0
 # bindsym XF86MonBrightnessUp exec ~/.config/i3/briup.sh
 
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
 
 # Media player controls
 # bindsym XF86AudioPlay exec playerctl play-pause
@@ -457,6 +486,17 @@ exec xrandr -r 60
 # to turn off numlock at startup
 exec numlockx off
 
-exec_always $HOME/.config/i3/bat_war.sh
+# exec_always $HOME/.config/i3/bat_war.sh
+exec $HOME/.config/i3/war.sh
+# exec --no-startup-id i3-battery-popup
 
 # exec_always --no-startup-id $HOME/.config/polybar/scripts/polybar-manager.sh launch
+
+# exec xautolock -time 5 -locker "$HOME/.config/i3/scripts/lockscreen.sh --lock"
+
+# set desktop background with custom effect
+# exec --no-startup-id betterlockscreen -w dim
+
+# Alternative (set last used background)
+# exec --no-startup-id source ~/.fehbg
+

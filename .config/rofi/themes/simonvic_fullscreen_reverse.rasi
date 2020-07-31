@@ -39,7 +39,7 @@ configuration {
 	*/
 	
 	text-color: @foreground;
-	accent: #000000;
+	accent: #FF5600;
 	active-background: @background;
 	active-foreground: @foreground;
 	normal-background: @background;

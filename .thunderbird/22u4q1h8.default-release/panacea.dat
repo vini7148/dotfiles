@@ -1,0 +1,80 @@
+// <!-- <mdb:mork:z v="1.4"/> -->
+< <(a=c)> // (f=iso-8859-1)
+  (8A=charset)(8B=boxFlags)(8C=hierDelim)(8D=onlineName)(8E=aclFlags)
+  (8F=serverTotal)(90=serverUnseen)(91=serverRecent)(92=indexingPriority)
+  (93=folderName)(94=applyIncomingFilters.empty)(95=applyIncomingFilters)
+  (96=nextUID)(97=lastSyncTimeInSec)
+  (98=dobayes.mailnews@mozilla.org#junk.empty)
+  (99=dobayes.mailnews@mozilla.org#junk)(9A=MRUTime)
+  (80=ns:msg:db:row:scope:folders:all)(81=ns:msg:db:table:kind:folders)
+  (82=key)(83=flags)(84=totalMsgs)(85=totalUnreadMsgs)
+  (86=pendingUnreadMsgs)(87=pendingMsgs)(88=expungedBytes)(89=folderSize)>
+
+<(80
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/INBOX.msf)(B8=8083014)(82=0)(84=ISO-8859-1)(AC=200040)(A0=2f)
+  (86=INBOX)(BA=1505)(BB=1a3b9)(88
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/Mail/Local Folders/Tr\
+ash.msf)(89=104)(83=ffffffffffffffff)(8A=Trash)(8B
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/Mail/Local Folders/Un\
+sent Messages.msf)(8C=804)(8E=Outbox)(8F
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/Mail/Local Folders)
+  (90=1c)(91=ffffffff)(92=)(93=Local Folders)(94
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Drafts.msf)(85=5e)(95=Drafts)(96
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Templates.msf)(B6=400000)(97=Templates)(98
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Sent.msf)(99=Sent)(9A
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Archives.msf)(9B=Archives)(9C
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Archive.msf)(9E=8086014)(9F=600040)(9D=Archive)(A1
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Bulk Mail.msf)(A4=40082014)(A5=201040)(A2=Bulk Mail)(A3=-1)
+  (A6
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Draft.msf)(A8=8082414)(A9=200840)(A7=Draft)(AA
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Drafts-1.msf)(AD
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Junk.msf)(B7=48082014)(AE=Junk)(AF
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Sent-1.msf)(B1=8082214)(B2=202040)(B0=60)(B3
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com/Trash.msf)(B4=82114)(B5=210040)(B9
+    =/home/vinayak/.thunderbird/22u4q1h8.default-release/ImapMail/imap.mail.ya\
+hoo.com)>
+{1:^80 {(k^81:c)(s=9)} 
+  [1(^82^80)(^83^B8)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89=0)(^8A^84)
+    (^8B^AC)(^8C=2f)(^8D^86)(^8E=0)(^8F^BA)(^90=0)(^91=0)(^96^BB)(^97=0)]
+  [2(^82^88)(^83^89)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^93^8A)]
+  [3(^82^8B)(^83^8C)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^93^8E)]
+  [4(^82^8F)(^83=1c)(^84^91)(^85^91)(^86=0)(^87=0)(^88=0)(^89^83)(^8A=)
+    (^93^93)]
+  [5(^82^94)(^83=0)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B=0)(^8C=5e)(^8D^95)(^8E=0)(^8F=0)(^90=0)(^91=0)]
+  [6(^82^96)(^83^B6)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B=0)(^8C=5e)(^8D^97)(^8E=0)(^8F=0)(^90=0)(^91=0)(^97=0)]
+  [7(^82^98)(^83=0)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B=0)(^8C=5e)(^8D^99)(^8E=0)(^8F=0)(^90=0)(^91=0)]
+  [8(^82^9A)(^83=0)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B=0)(^8C=5e)(^8D^9B)(^8E=0)(^8F=0)(^90=0)(^91=0)]
+  [9(^82^9C)(^83^9E)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B^9F)(^8C=2f)(^8D^9D)(^8E=0)(^8F=0)(^90=0)(^91=0)]
+  [A(^82^A1)(^83^A4)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B^A5)(^8C=2f)(^8D^A2)(^8E=0)(^8F=0)(^90=0)(^91=0)(^92=-1)]
+  [B(^82^A6)(^83^A8)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B^A9)(^8C=2f)(^8D^A7)(^8E=0)(^8F=0)(^90=0)(^91=0)]
+  [C(^82^AA)(^83^A8)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B^AC)(^8C=2f)(^8D^95)(^8E=0)(^8F=0)(^90=0)(^91=0)]
+  [D(^82^AD)(^83^B7)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B^AC)(^8C=2f)(^8D^AE)(^8E=0)(^8F=0)(^90=0)(^91=0)(^92=-1)]
+  [E(^82^AF)(^83^B1)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B^B2)(^8C=2f)(^8D^99)(^8E=0)(^8F=0)(^90=0)(^91=0)(^92=60)]
+  [F(^82^B3)(^83^B4)(^84=0)(^85=0)(^86=0)(^87=0)(^88=0)(^89^83)(^8A^84)
+    (^8B^B5)(^8C=2f)(^8D^8A)(^8E=0)(^8F=0)(^90=0)(^91=0)]
+  [10(^82^B9)(^83=0)(^84^91)(^85^91)(^86=0)(^87=0)(^88=0)(^89^83)(^8A=)
+    (^8B=0)(^8C=5e)(^8D=)(^8E=0)(^8F=0)(^90=0)(^91=0)]}

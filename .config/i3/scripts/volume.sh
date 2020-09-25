@@ -31,7 +31,7 @@ sound=/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 urgency=normal
 
 #	At which level the volume is considered too high
-warningLevel=60
+warningLevel=70
 
 #	For how much milliseconds the notification will stay visible
 timeout=1500
@@ -42,13 +42,15 @@ uid=2593
 # App name in dunst
 appName="simonvic.Volume"
 
+    # amixer -M get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
 
 function getVolume {
-    amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
+    # amixer -M get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
+    amixer -D pulse get Master | awk -F 'Left:|[][]' 'BEGIN {RS=""}{ print $3 }' | cut -d '%' -f 1
 }
 
 function isMute {
-    amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
+    amixer -M get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
 }
 
 function buildBar {

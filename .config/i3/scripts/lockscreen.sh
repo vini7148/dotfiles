@@ -20,15 +20,17 @@ font="LatoLight"
 #Backgrounds available: image, blur (i3lock-color blur method), blurAndDim (uses scrot and imagemagick, slower)
 backgroundType=blurAndDim
 image=$HOME/Pictures/Wallpapers/mountain3.png
-blurStrength=5
+blurStrength=10
 blur2Strength=0x10
-dimStrength=60%
+dimStrength=69%
 
 # Available options: circle, bars
 indicatorType=circle
 indicatorPos=960:740
+# 960
 timeString=%H:%M:%S
 timePos=960:540
+# 960 orignal
 timeSize=150
 dateString="%A,%d %B"
 datePos=960:570
@@ -59,8 +61,8 @@ insideVerifyingColor=00000000
 insideWrongColor=00000000
 ringColor=00000000
 ringVerifyingColor=ffffffff
-ringWrongColor=f0544cff
-separatorColor=f0544cff
+ringWrongColor=7e57c2
+separatorColor=7e57c2
 
 # Settings for the bars
 # 0 = down, 1 = up, 2 = both
@@ -118,7 +120,7 @@ args="--pass-media-keys --redraw-thread --force-clock \
 			background="--blur=$blurStrength"
 		;;
 		blurAndDim)
-			scrot -z -q 1 -o /tmp/lockscreenScreenshot.png && convert /tmp/lockscreenScreenshot.png -blur $blur2Strength -fill black -colorize $dimStrength /tmp/lockscreenScreenshot.png
+			scrot -z -q 1 -o /tmp/lockscreenScreenshot.png && convert /tmp/lockscreenScreenshot.png -blur $blur2Strength -colorize $dimStrength /tmp/lockscreenScreenshot.png
 			background="-i /tmp/lockscreenScreenshot.png"
 		;;
 		*)

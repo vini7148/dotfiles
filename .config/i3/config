@@ -30,8 +30,10 @@ bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id ~/.config/rofi/scripts/vo
 bindsym $mod+m exec --no-startup-id ~/.config/rofi/scripts/mpd.sh
 bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/network.sh
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
-bindsym $mod+z exec --no-startup-id ~/.config/rofi/scripts/quicklinks.sh
+# bindsym $mod+z exec --no-startup-id ~/.config/rofi/scripts/quicklinks.sh
 bindsym $mod+g exec --no-startup-id ~/.config/rofi/scripts/time.sh
+
+bindsym $mod+z move workspace to output right
 
 # change focus
 bindsym $mod+j focus left
@@ -232,13 +234,15 @@ mode "resize" {
 
 # Wallpaper
 exec --no-startup-id nitrogen --restore; sleep 1; 
-exec_always --no-startup-id pkill compton; compton --blur-background
+exec_always --no-startup-id pkill compton; compton --experimental-backends --backend glx
 # compton -b
 # compton -b
 # exec bwall -pixel_city
 # exec bwall -city
 # exec bwall -space
 # exec dwall -s room
+
+# exec_always --no-startip-id pkill picom; picom --experimental-backends --backend glx
 
 # exec --no-startup-id nm-applet
 # exec --no-startup-id xfce4-power-manager
@@ -266,11 +270,11 @@ client.background #2f2f38
 
 # Gaps
 gaps inner 10
-gaps outer 35
+gaps outer 5
 
 smart_borders on
 smart_borders no_gaps
-border_radius 2
+# border_radius 9
 
 # smart_borders on
 # smart_gaps off
@@ -499,4 +503,16 @@ exec $HOME/.config/i3/war.sh
 
 # Alternative (set last used background)
 # exec --no-startup-id source ~/.fehbg
+
+# for the todo list 
+
+bindsym $mod+i exec ./toDo
+bindsym $mod+Shift+i exec bash /bin/modList
+bindsym $mod+Control+i exec bash /bin/clearToDo
+
+bindsym $mod+Shift+m exec ./menu.sh
+
+
+exec indicator-keylock
+
 

@@ -39,7 +39,7 @@ configuration {
 	*/
 	
 	text-color: @foreground;
-	accent: #607d8b;
+	accent: #7e57c2;
 	active-background: @background;
 	active-foreground: @foreground;
 	normal-background: @background;
@@ -71,7 +71,8 @@ window {
 	y-offset: -47%;
 	x-offset: 29%;
 	transparency: "real";
-	background-color: rgba(0,0,0,0.3);
+	background-color: #212121FF;
+	/*rgba(0,0,0,0.3);*/
 }
 
 mainbox {

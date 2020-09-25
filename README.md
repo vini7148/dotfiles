@@ -23,4 +23,4 @@ This repository contains a copy of the dotfiles for my curret linux setup
 
 ## Screenshots
 
-![img_1](https://github.com/vini7148/dotfiles/blob/master/ScreenShots/ss_4.png)
+![img_1](https://github.com/vini7148/dotfiles/blob/master/ScreenShots/ss_3.png)

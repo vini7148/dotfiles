@@ -41,7 +41,7 @@ timeout=5000
 uid=2595
 
 # App name in dunst
-appName="simonvic.Playerctl"
+appName="Playerctl"
 
 
 function getTitle {

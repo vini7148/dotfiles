@@ -3,7 +3,7 @@ st=$(playerctl -p spotify status)
 
 if [ "$st" = "Playing" ]
 then
-    echo "Now $st"
+    echo "$st"
 elif [ "$st" = "Paused" ]
 then
     echo "$st"

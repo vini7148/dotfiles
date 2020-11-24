@@ -2,23 +2,23 @@ steps=$1
 length=$2
 drawEmpty=$3
 
-fullChar="█"
-midChar0="▆"
-midChar1="▅"
-midChar2="▃"
-midChar3="▁"
-midPoint=""
-emptyChar="░"
+# fullChar="█"
+# midChar0="▆"
+# midChar1="▅"
+# midChar2="▃"
+# midChar3="▁"
+# midPoint=""
+# emptyChar="░"
 
 
 # Line
-#fullChar="━"
-#midChar0="╾"
-#midChar1="╾"
-#midChar2="╾"
-#midChar3="╾"
-#midPoint=""
-#emptyChar="─"
+fullChar="━"
+midChar0="╾"
+midChar1="╾"
+midChar2="╾"
+midChar3="╾"
+midPoint=""
+emptyChar="─"
 
 # Using braille
 #fullChar="⣿"

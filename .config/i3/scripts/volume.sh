@@ -40,7 +40,7 @@ timeout=1500
 uid=2593
 
 # App name in dunst
-appName="simonvic.Volume"
+appName="Volume"
 
     # amixer -M get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
 

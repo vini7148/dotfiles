@@ -1,7 +1,0 @@
-{
-    "python.pythonPath": "/bin/python3",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
-    "workbench.preferredDarkColorTheme": "Community Material Theme High Contrast",
-    "window.menuBarVisibility": "toggle"
-}

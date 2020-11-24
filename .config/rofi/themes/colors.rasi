@@ -19,4 +19,4 @@
  *
  */
 
-@import "colorschemes/material-dark/deep_purple.rasi"
+@import "colorschemes/arc-dark.rasi"

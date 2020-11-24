@@ -38,7 +38,7 @@ timeout=1500
 uid=2592
 
 # App name in dunst
-appName="simonvic.Microphone"
+appName="Microphone"
 
 function getVolume {
   amixer sget Capture csvolume | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1

@@ -52,7 +52,7 @@ source $redshiftState
 uid=2594
 
 # App name in dunst
-appName="simonvic.Brightness"
+appName="Brightness"
 
 #####################################################################
 

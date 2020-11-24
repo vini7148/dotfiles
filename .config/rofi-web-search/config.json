@@ -1,0 +1,8 @@
+{
+    "SEARCH_ENGINE": "google",
+    "BROWSER": "chrome",
+    "TERMINAL": [
+        "gnome-terminal",
+        "--"
+    ]
+}

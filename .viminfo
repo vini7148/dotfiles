@@ -12,21 +12,13 @@
 ~h
 # Command Line History (newest to oldest):
 :q
-|2,0,1600365474,,"q"
-:e /media/vinayak/Extreme\ SSD/Code/
-|2,0,1600176140,,"e /media/vinayak/Extreme\\ SSD/Code/"
-:s
-|2,0,1600176108,,"s"
-:v
-|2,0,1600176106,,"v"
-:IPython
-|2,0,1600003446,,"IPython"
-:e /media/vinayak/Extreme\ SSD/Sem_5/
-|2,0,1600003118,,"e /media/vinayak/Extreme\\ SSD/Sem_5/"
-:PlugInstall 
-|2,0,1599891187,,"PlugInstall "
-:e ~/codes/buildingroads.cpp
-|2,0,1599891039,,"e ~/codes/buildingroads.cpp"
+|2,0,1606230842,,"q"
+:q!
+|2,0,1605625406,,"q!"
+:Q!
+|2,0,1605625402,,"Q!"
+:w
+|2,0,1605625394,,"w"
 
 # Search String History (newest to oldest):
 
@@ -37,251 +29,35 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
+""0	CHAR	0
+	pkmot
+|3,1,0,0,1,0,1606230821,"pkmot"
+"1	LINE	0
+	
+|3,0,1,1,1,0,1606230821,""
+"-	CHAR	0
+	pkmot
+|3,0,36,0,1,0,1605625383,"pkmot"
 
 # File marks:
-'0  16  0  /media/vinayak/Extreme SSD/Code/CSES/rest.cpp
-|4,48,16,0,1600176184,"/media/vinayak/Extreme SSD/Code/CSES/rest.cpp"
-'1  1  0  /media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp
-|4,49,1,0,1600167915,"/media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp"
-'2  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,50,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
-'3  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,51,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
-'4  47  0  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,52,47,0,1600003250,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
-'5  15  15  ~/codes/buildingroads.cpp
-|4,53,15,15,1599891051,"~/codes/buildingroads.cpp"
-'6  15  13  ~/codes/buildingroads.cpp
-|4,54,15,13,1599891024,"~/codes/buildingroads.cpp"
+'0  12  4  ~/.config/nitrogen/nitrogen.cfg
+|4,48,12,4,1605625406,"~/.config/nitrogen/nitrogen.cfg"
 
 # Jumplist (newest first):
--'  16  0  /media/vinayak/Extreme SSD/Code/CSES/rest.cpp
-|4,39,16,0,1600176184,"/media/vinayak/Extreme SSD/Code/CSES/rest.cpp"
--'  16  0  /media/vinayak/Extreme SSD/Code/CSES/rest.cpp
-|4,39,16,0,1600176184,"/media/vinayak/Extreme SSD/Code/CSES/rest.cpp"
--'  100  0  ~/NERD_tree_1
-|4,39,100,0,1600176092,"~/NERD_tree_1"
--'  100  0  ~/NERD_tree_1
-|4,39,100,0,1600176092,"~/NERD_tree_1"
--'  151  0  ~/NERD_tree_1
-|4,39,151,0,1600176071,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600176071,"~/NERD_tree_1"
--'  151  0  ~/NERD_tree_1
-|4,39,151,0,1600176071,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600176071,"~/NERD_tree_1"
--'  1  0  /media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp
-|4,39,1,0,1600167915,"/media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp"
--'  1  0  /media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp
-|4,39,1,0,1600167915,"/media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp"
--'  1  0  /media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp
-|4,39,1,0,1600167915,"/media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp"
--'  1  0  /media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp
-|4,39,1,0,1600167915,"/media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  27  0  /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-|4,39,27,0,1600062027,"/media/vinayak/Extreme SSD/Code/CSES/factory.cpp"
--'  15  0  ~/NERD_tree_1
-|4,39,15,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  15  0  ~/NERD_tree_1
-|4,39,15,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  55  0  ~/NERD_tree_1
-|4,39,55,0,1600061146,"~/NERD_tree_1"
--'  108  0  ~/NERD_tree_1
-|4,39,108,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  108  0  ~/NERD_tree_1
-|4,39,108,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  148  0  ~/NERD_tree_1
-|4,39,148,0,1600061140,"~/NERD_tree_1"
--'  1  0  ~/NERD_tree_1
-|4,39,1,0,1600061140,"~/NERD_tree_1"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
--'  102  10  /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-|4,39,102,10,1600003558,"/media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb"
+-'  12  4  ~/.config/nitrogen/nitrogen.cfg
+|4,39,12,4,1605625406,"~/.config/nitrogen/nitrogen.cfg"
+-'  12  4  ~/.config/nitrogen/nitrogen.cfg
+|4,39,12,4,1605625406,"~/.config/nitrogen/nitrogen.cfg"
+-'  1  0  ~/.config/nitrogen/nitrogen.cfg
+|4,39,1,0,1605625378,"~/.config/nitrogen/nitrogen.cfg"
+-'  1  0  ~/.config/nitrogen/nitrogen.cfg
+|4,39,1,0,1605625378,"~/.config/nitrogen/nitrogen.cfg"
 
 # History of marks within files (newest to oldest):
 
-> /media/vinayak/Extreme SSD/Code/CSES/rest.cpp
-	*	1600176183	0
-	"	16	0
-
-> /media/vinayak/Extreme SSD/Code/CSES/rooma.cpp
-	*	1600176181	0
-	"	1	0
-
-> ~/NERD_tree_1
-	*	1600176176	0
-	"	104	1
-	.	1	0
-	+	1	0
-
-> /media/vinayak/Extreme SSD/Code/CSES/rangesu.cpp
-	*	1600167912	0
-	"	1	0
-
-> /media/vinayak/Extreme SSD/Code/CSES/factory.cpp
-	*	1600061564	0
-	"	27	0
-
-> /media/vinayak/Extreme SSD/Sem_5/Machine Learning (CED17)/dtree_bus_model/model.ipynb
-	*	1600003556	0
-	"	102	10
-
-> ~/codes/buildingroads.cpp
-	*	1599891050	0
-	"	15	15
+> ~/.config/nitrogen/nitrogen.cfg
+	*	1605625402	0
+	"	12	4
+	^	12	5
+	.	12	5
+	+	12	5

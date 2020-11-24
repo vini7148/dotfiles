@@ -13,24 +13,24 @@
 
 * {
   /* General */
-  text-font:                            "Comfortaa 12";
+  text-font:                            "Roboto 12";
   icon-font:                            "Hurmit Nerd Font Mono 32";
   icon-font-small:                      "Hurmit Nerd Font Mono 24";
 
   option-6-listview-spacing:            10px;
 
-  menu-window-padding:                   5px 15px;
+  menu-window-padding:                   25px 15px;
   menu-inputbar-margin:                  10px 0px;
   menu-prompt-padding:                   10px 20px 10px 20px;
   menu-prompt-margin:                    0px 0px 0px -2px;
-  menu-element-border:                   0px;
-  menu-element-padding:                  10px 15px 5px -35px;
+  menu-element-border:                   10px;
+  menu-element-padding:                  15px 25px 15px 25px;
 }
 
 /* ########### */
 
 #window {
-  width: 21%;
+  width: 24%;
   height: 19%;
 }
 

@@ -15,25 +15,26 @@
 ###########################################
 
 textColor=ffffffAA
-font="LatoLight"
+font="SpaceMono Nerd Font Mono"
+# font="LatoLight"
 
 #Backgrounds available: image, blur (i3lock-color blur method), blurAndDim (uses scrot and imagemagick, slower)
 backgroundType=blurAndDim
-image=$HOME/Pictures/Wallpapers/mountain3.png
+image=$HOME/Pictures/walk.png
 blurStrength=10
 blur2Strength=0x10
 dimStrength=69%
 
 # Available options: circle, bars
 indicatorType=circle
-indicatorPos=960:740
+indicatorPos=960:760
 # 960
 timeString=%H:%M:%S
-timePos=960:540
+timePos=960:560
 # 960 orignal
 timeSize=150
 dateString="%A,%d %B"
-datePos=960:570
+datePos=1160:590
 dateSize=20
 verifyText=Verifying...
 wrongText=Wrong!

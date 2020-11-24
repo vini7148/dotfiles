@@ -1,9 +1,9 @@
 #! /bin/bash
 
 SLEEP_TIME=5   # Default time between checks.
-SAFE_PERCENT=30  # Still safe at this level.
-DANGER_PERCENT=15  # Warn when battery at this level.
-CRITICAL_PERCENT=5  # Hibernate when battery at this level.
+SAFE_PERCENT=31  # Still safe at this level.
+DANGER_PERCENT=16  # Warn when battery at this level.
+CRITICAL_PERCENT=6  # Hibernate when battery at this level.
 
 NAGBAR_PID=0
 export DISPLAY=:0.0

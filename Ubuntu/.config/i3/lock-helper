@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+#battery level
+text="Battery: $(acpi -b | grep -P -o '\d+%')"
+
+#read in initial arguments from lock
+icon="$1"
+font="$2"
+fontfill="$3"
+
+#set screen file locations
+tmpbg="/tmp/screen.png"
+infobg="/tmp/lockinfo.png"
+
+convert "$tmpbg" -font "$font" -pointsize 26 -fill "$fontfill" -gravity center \
+-annotate +0+160 "$text" "$icon" -gravity center -composite -matte "$infobg"
+
+#kill then run i3lock with updated battery info
+pkill i3lock
+i3lock -u -i "$infobg"

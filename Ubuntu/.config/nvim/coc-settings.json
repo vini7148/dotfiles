@@ -1,0 +1,68 @@
+{
+  // coc settings
+  "coc.preferences.snippets.enable": true,
+  "coc.preferences.snippetStatusText": "🌈",
+  "coc.preferences.formatOnType": false,
+
+  // diagnostic
+  "diagnostic.infoSign": "i",
+  "diagnostic.hintSign": "*",
+  "diagnostic.warningSign": "!",
+  "diagnostic.errorSign": "x",
+  "diagnostic.enable": true,
+  "diagnostic.signOffset": 9999999,
+  "diagnostic.highlightOffset": 9999999,
+  "diagnostic.refreshOnInsertMode": true,
+
+  // suggest
+  "suggest.detailField": "abbr",
+  "suggest.detailMaxLength": 30,
+  "suggest.maxCompleteItemCount": 50,
+  "suggest.maxPreviewWidth": 80,
+  "suggest.triggerAfterInsertEnter": false,
+
+  // priority
+  "suggest.languageSourcePriority": 9999,
+  "coc.source.syntax.priority": 10,
+  "coc.source.file.priority": 4,
+  "coc.source.around.priority": 3,
+  "coc.source.tag.priority": 2,
+  "coc.source.emoji.priority": 2,
+  "coc.source.dictionary.priority": 1,
+  "coc.source.buffer.priority": 1,
+
+  // snippets
+  "snippets.extends": {
+    "html": ["html-ng", "html-ng-material", "html-ng-flexlayout", "html-react"],
+    "scss": ["css"],
+    "sass": ["css"],
+    "less": ["css"],
+    "javascript": ["javascript", "react"],
+    "typescript": ["javascript", "typescript", "react", "angular"],
+    "vim": ["vim"],
+    "json": ["json"]
+  },
+
+  // html
+  "html.suggest.ionic": true,
+
+  // emoji
+  "coc.source.emoji.filetypes": [
+    "markdown",
+    "gitcommit"
+  ],
+
+  // eslint
+  "eslint.enable": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascript.jsx",
+    "javascriptreact"
+  ],
+  "eslint.autoFix": false,
+  "eslint.autoFixOnSave": false,
+
+  // tslint
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": false
+}

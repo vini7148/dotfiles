@@ -1,5 +1,0 @@
-autoconfig.thunderbird.net:HSTS	0	18432	1624095841184,1,0,2
-api.login.yahoo.com:HSTS	0	18432	1608111955810,1,0,2
-location.services.mozilla.com:HSTS	0	18432	1624095815753,1,1,2
-www.yahoo.com:HSTS	0	18432	1624095842399,1,0,2
-yahoo.com:HSTS	0	18432	1624095841964,1,0,2
